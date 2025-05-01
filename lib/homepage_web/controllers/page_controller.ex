@@ -1,9 +1,11 @@
 defmodule HomepageWeb.PageController do
   use HomepageWeb, :controller
 
-  def home(conn, _params) do
-    # The home page is often custom made,
-    # so skip the default app layout.
-    render(conn, :home, layout: false)
+  @layout :app
+
+  def index(conn, %{"page_name" => "clients"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:clients)
   end
 end

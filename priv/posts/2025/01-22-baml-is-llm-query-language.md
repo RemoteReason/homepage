@@ -1,12 +1,13 @@
 %{
   title: "BAML is an LLM query language",
+  thumbnail: "01-22-baml-preview.png",
   author: "Paul Sabou",
   tags: ~w(llm gen_ai),
   description: "BAML - a specialized, typed, composable integration layer that brings reliability, clarity, and repeatability to every prompt and response"
 }
 ---
 
-# Overview :smile:
+# Overview
 
 Modern applications never run in isolation—they constantly integrate with external systems such as SQL databases (e.g. PostgreSQL), third-party HTTP/GraphQL APIs, client browsers, and, since 2020, large-language models (LLMs). Each of these systems exposes its own “idiomatic language” and tooling: the concepts you use, the API surface, the guarantees provided, and the developer experience (DX) around testing, security, and cost control.
 
@@ -78,7 +79,7 @@ Handle extra whitespace, minor deviations, or partial outputs gracefully—espec
 Emit partial data as soon as it’s ready (e.g. for token-by-token UI updates or long lists).
 
 ## Introducing BAML
-BAML (Basically a Made-up Language) is a small, declarative language that lives on top of natural language to give you all of the above:
+[BAML (Basically a Made-up Language)](https://github.com/BoundaryML/baml) is a small, declarative language that lives on top of natural language to give you all of the above:
 
  Define a schema for a user lookup
 ```

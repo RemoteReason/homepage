@@ -1,0 +1,20 @@
+<div class="bg-white py-14 sm:py-12">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+    <div class="mx-auto max-w-2xl lg:mx-0">
+      <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">Our clients</h2>
+      <p class="mt-6 text-lg/8 text-gray-600">We exist because we deliver value to our clients.</p>
+    </div>
+    <ul role="list" class="mx-auto mt-20 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+          <%= for client <- HomepageWeb.LinkHelper.clients_list() do %>
+      <li>
+        <img class="aspect-[3/2] w-full rounded-2xl object-cover" src={client.image} alt="">
+        <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">{client.name}</h3>
+        <.link href={client.website} class="text-gray-600 hover:text-gray-900 underline">> {client.website}</.link>
+        <p class="text-base/7 text-gray-600">{client.description}</p>
+      </li>
+      <% end %>
+
+      <!-- More people... -->
+    </ul>
+  </div>
+</div>

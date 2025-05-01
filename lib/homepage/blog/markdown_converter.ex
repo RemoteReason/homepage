@@ -16,6 +16,15 @@ defmodule Homepage.Blog.MarkdownConverter do
             tasklist: true,
             footnotes: true,
             shortcodes: true
+          ],
+          parse: [
+            smart: true,
+            relaxed_tasklist_matching: true,
+            relaxed_autolinks: true
+          ],
+          render: [
+            github_pre_lang: true,
+            unsafe_: true
           ]
         )
 

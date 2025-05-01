@@ -37,6 +37,8 @@ defmodule HomepageWeb.Router do
     scope "/", HomepageWeb do
       pipe_through :browser
 
+      get "/page/:page_name", PageController, :index
+
       get "/blog", BlogController, :index
       get "/blog/:id", BlogController, :show
     end
