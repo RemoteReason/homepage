@@ -41,6 +41,8 @@ defmodule HomepageWeb.Router do
 
       get "/blog", BlogController, :index
       get "/blog/:id", BlogController, :show
+
+      get "/", PageController, :index
     end
 
     scope "/dev" do

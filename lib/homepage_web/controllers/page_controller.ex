@@ -14,4 +14,10 @@ defmodule HomepageWeb.PageController do
     |> put_layout(html: @layout)
     |> render(:lets_talk)
   end
+
+  def index(conn, _) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:home)
+  end
 end
