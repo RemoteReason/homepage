@@ -14,7 +14,7 @@ defmodule HomepageWeb.LinkHelper do
   end
 
   def lets_talk do
-    ~p"/page/lets-talk"
+    ~p"/page/lets_talk"
   end
 
   def clients do
