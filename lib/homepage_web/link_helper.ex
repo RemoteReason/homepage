@@ -1,6 +1,10 @@
 defmodule HomepageWeb.LinkHelper do
   use HomepageWeb, :verified_routes
 
+  def image_path(image) do
+    Path.join("/images", image)
+  end
+
   def blog_post_thumbnail_path(post) do
     ~p"/images/posts/#{post.date.year}/#{post.thumbnail}"
   end
@@ -21,12 +25,8 @@ defmodule HomepageWeb.LinkHelper do
     ~p"/page/clients"
   end
 
-  def services do
-    ~p"/page/services"
-  end
-
-  def expertise do
-    ~p"/page/expertise"
+  def what_we_do do
+    ~p"/page/what_we_do"
   end
 
   def footer_navigation do
@@ -36,16 +36,12 @@ defmodule HomepageWeb.LinkHelper do
   def top_navigation do
     [
       %{
+        name: "What we do",
+        url: what_we_do()
+      },
+      %{
         name: "Clients",
         url: clients()
-      },
-      %{
-        name: "Services",
-        url: services()
-      },
-      %{
-        name: "Expertise",
-        url: expertise()
       },
       %{
         name: "Blog",
