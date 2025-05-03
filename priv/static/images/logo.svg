@@ -3,5 +3,5 @@
   xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xlink="http://www.w3.org/1999/xlink">
   <defs />
   <rect fill="black" height="100px" width="200px" x="0" y="0" /><text fill="white" font-family="Arial" font-size="60px"
-    font-weight="bold" x="50px" y="70px">R2</text>
+    font-weight="bold" x="50px" y="70px">R2_</text>
 </svg>
