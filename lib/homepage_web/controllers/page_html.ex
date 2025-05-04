@@ -7,6 +7,7 @@ defmodule HomepageWeb.PageHTML do
   use HomepageWeb, :html
 
   import HomepageWeb.LayoutComponents
+  alias Homepage.HomepageData
 
   embed_templates "page_html/*"
 
