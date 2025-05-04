@@ -17,6 +17,18 @@ defmodule HomepageWeb.PageController do
     |> render(:lets_talk)
   end
 
+  def index(conn, %{"page_name" => "ai_engineering"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:ai_engineering)
+  end
+
+  def index(conn, %{"page_name" => "mobile_apps"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:mobile_apps)
+  end
+
   def index(conn, %{"page_name" => @default_page}) do
     conn
     |> put_layout(html: @layout)

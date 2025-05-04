@@ -1,0 +1,63 @@
+<.layout_page_centered>
+  <.content_page_header
+    title="We build mobile apps"
+    description="We make apps that work on phones, tablets, wearables & more."
+  />
+  <.layout_bento_box rows={1}>
+    <.layout_bento_box_small_container>
+      <.content_list_items
+        title="Cross platform"
+        description="Most of the code is reused when building the Android & IOS apps. Best value for most business cases."
+        items={["Coded with React Native", "> 50% cheaper vs. native", "Good performance"]}
+      />
+    </.layout_bento_box_small_container>
+
+    <.layout_bento_box_small_container>
+      <.content_list_items
+        title="iOS Native"
+        description="iOS specific code runs only on Apple devices. Best for advanced hardware & OS integration."
+        items={[
+          "Coded in Swift / Objective C",
+          "Full OS / hardware access",
+          "Maximum performance"
+        ]}
+      />
+    </.layout_bento_box_small_container>
+
+    <.layout_bento_box_small_container>
+      <.content_list_items
+        title="Android Native"
+        description="Android specific code runs only on Android devices. Best for advanced hardware & OS integration."
+        items={[
+          "Coded in Kotlin / Java",
+          "Full OS / hardware access",
+          "Maximum performance"
+        ]}
+      />
+    </.layout_bento_box_small_container>
+  </.layout_bento_box>
+
+  <.details_features_card
+    title="What do you get?"
+    image={HomepageWeb.LinkHelper.image_path("/expertise/mobile_apps.svg")}
+    description="Your mobile app is crafted with care for the overall customer experience."
+    features={[
+      %{
+        name: "Look & feel",
+        icon_name: "hero-heart",
+        description: "The app looks great & feels right on all relevant screen sizes & devices."
+      },
+      %{
+        name: "Performant",
+        icon_name: "hero-bolt",
+        description: "The app feels fast & smooth. Uses the right amount battery & mobile data."
+      },
+      %{
+        name: "Secure",
+        icon_name: "hero-shield-check",
+        description:
+          "The user data & communication is secure. All data handling complies with relevant regulations."
+      }
+    ]}
+  />
+</.layout_page_centered>
