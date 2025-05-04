@@ -29,6 +29,12 @@ defmodule HomepageWeb.PageController do
     |> render(:mobile_apps)
   end
 
+  def index(conn, %{"page_name" => "web_apps"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:web_apps)
+  end
+
   def index(conn, %{"page_name" => @default_page}) do
     conn
     |> put_layout(html: @layout)

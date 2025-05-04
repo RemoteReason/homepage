@@ -13,40 +13,64 @@ defmodule HomepageWeb.LinkHelper do
     ~p"/blog/#{post.id}"
   end
 
-  def blog_post_list do
-    ~p"/blog"
-  end
+  def blog,
+    do: %{
+      name: "Blog",
+      url: ~p"/blog"
+    }
 
-  def lets_talk do
-    ~p"/page/lets_talk"
-  end
+  def lets_talk,
+    do: %{
+      name: "Let's talk",
+      url: ~p"/page/lets_talk"
+    }
 
-  def clients do
-    ~p"/page/clients"
-  end
+  def clients,
+    do: %{
+      name: "Clients",
+      url: ~p"/page/clients"
+    }
 
-  def what_we_do do
-    ~p"/page/what_we_do"
-  end
+  def ai_engineering,
+    do: %{
+      name: "AI Engineering",
+      url: ~p"/page/ai_engineering"
+    }
+
+  def what_we_do,
+    do: %{
+      name: "What we do",
+      url: ~p"/page/what_we_do"
+    }
+
+  def web_apps,
+    do: %{
+      name: "Web Apps",
+      url: ~p"/page/web_apps"
+    }
+
+  def mobile_apps,
+    do: %{
+      name: "Mobile Apps",
+      url: ~p"/page/mobile_apps"
+    }
 
   def footer_navigation do
-    top_navigation()
+    [
+      what_we_do(),
+      ai_engineering(),
+      web_apps(),
+      mobile_apps(),
+      clients(),
+      blog()
+    ]
   end
 
   def top_navigation do
     [
-      %{
-        name: "What we do",
-        url: what_we_do()
-      },
-      %{
-        name: "Clients",
-        url: clients()
-      },
-      %{
-        name: "Blog",
-        url: blog_post_list()
-      }
+      what_we_do(),
+      clients(),
+      blog()
     ]
   end
 

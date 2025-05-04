@@ -1,14 +1,5 @@
 <.layout_page_centered>
-  <div class="mx-auto max-w-2xl lg:text-center">
-    <h2 class="text-base/7 font-semibold text-indigo-600">for AI first companies</h2>
-    <p class="p-4 mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance rounded-lg bg-black">
-      we build software for humans and bots<span class="animate-pulse">_</span>
-    </p>
-    <p class="mt-6 text-lg/8 text-gray-600">
-      AI sparkles <.icon name="hero-sparkles" class="h-5 w-5 px-2 text-indigo-600" />
-      apps and clouds
-    </p>
-  </div>
+  <.brand_banner />
   <div class="mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl">
     <dl class="grid max-w-xl grid-cols-1 gap-x-8 gap-y-10 lg:max-w-none lg:grid-cols-2 lg:gap-y-16">
       <.featured_card
@@ -60,30 +51,36 @@
     </.layout_bento_box_large_container>
 
     <.layout_bento_box_small_container>
-      <.content_card_image_with_text
-        title={HomepageData.service_ai_engineering().name}
-        subtitle={HomepageData.service_ai_engineering().subtitle}
-        description={HomepageData.service_ai_engineering().description}
-        image={LinkHelper.image_path(HomepageData.service_ai_engineering().image)}
-      />
+      <.link href={HomepageWeb.LinkHelper.ai_engineering().url}>
+        <.content_card_image_with_text
+          title={HomepageData.service_ai_engineering().name}
+          subtitle={HomepageData.service_ai_engineering().subtitle}
+          description={HomepageData.service_ai_engineering().description}
+          image={LinkHelper.image_path(HomepageData.service_ai_engineering().image)}
+        />
+      </.link>
     </.layout_bento_box_small_container>
 
     <.layout_bento_box_small_container>
-      <.content_card_image_with_text
-        title={HomepageData.service_mobile_apps().name}
-        subtitle={HomepageData.service_mobile_apps().subtitle}
-        description={HomepageData.service_mobile_apps().description}
-        image={LinkHelper.image_path(HomepageData.service_mobile_apps().image)}
-      />
+      <.link href={HomepageWeb.LinkHelper.mobile_apps().url}>
+        <.content_card_image_with_text
+          title={HomepageData.service_mobile_apps().name}
+          subtitle={HomepageData.service_mobile_apps().subtitle}
+          description={HomepageData.service_mobile_apps().description}
+          image={LinkHelper.image_path(HomepageData.service_mobile_apps().image)}
+        />
+      </.link>
     </.layout_bento_box_small_container>
 
     <.layout_bento_box_small_container>
-      <.content_card_image_with_text
-        title="Web apps"
-        subtitle="Frontend / Backend / DevOps"
-        description="We build webapps & platforms. We handle frontend, backend, devops, cloud and everything."
-        image={LinkHelper.image_path("/expertise/web_apps.svg")}
-      />
+      <.link href={HomepageWeb.LinkHelper.web_apps().url}>
+        <.content_card_image_with_text
+          title="Web apps"
+          subtitle="Frontend / Backend / DevOps"
+          description="We build webapps & platforms. We handle frontend, backend, devops, cloud and everything."
+          image={LinkHelper.image_path("/expertise/web_apps.svg")}
+        />
+      </.link>
     </.layout_bento_box_small_container>
   </.layout_bento_box>
 </.layout_page_centered>
