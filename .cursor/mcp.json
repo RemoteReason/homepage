@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "tidewave": {
+      "url": "http://localhost:4000/tidewave/mcp"
+    },
+    "context7": {
+      "command": "deno",
+      "args": [
+        "run",
+        "--allow-net",
+        "npm:@upstash/context7-mcp"
+      ]
+    }
+  }
+}

@@ -58,7 +58,9 @@ defmodule Homepage.MixProject do
       {:nimble_publisher, "~> 1.0"},
       {:makeup_elixir, ">= 0.0.0"},
       {:makeup_erlang, ">= 0.0.0"},
-      {:mdex, "~> 0.6"}
+      {:mdex, "~> 0.6"},
+      # Tidewave - LLM API MCP
+      {:tidewave, "~> 0.1"}
     ]
   end
 
