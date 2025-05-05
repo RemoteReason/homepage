@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
 
-    <.social_media_share_tags site_open_graph={@meta_tags} />
-    <.live_title default="Homepage" suffix=" · Phoenix Framework">
-      {assigns[:page_title]}
+    <.social_media_share_tags site_open_graph={@page_data.open_graph} />
+    <.live_title>
+      {assigns[:page_data].title}
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>

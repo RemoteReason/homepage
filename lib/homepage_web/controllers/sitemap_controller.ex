@@ -24,7 +24,7 @@ defmodule HomepageWeb.SitemapController do
     response = """
     <?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    #{Enum.map(LinkHelper.all_navigation(), &sitemap_entry.(Deployment.server_url(&1.url), DateTime.utc_now()))}
+    #{Enum.map(HomepageWeb.HomepagePageData.all_navigation(), &sitemap_entry.(Deployment.server_url(&1.url), DateTime.utc_now()))}
     #{Enum.map(Blog.all_posts(), &sitemap_entry.(Deployment.server_url(LinkHelper.blog_post_show(&1)), DateTime.utc_now()))}
     #{sitemap_entry.(social_links.github, DateTime.utc_now())}
     #{sitemap_entry.(social_links.twitter, DateTime.utc_now())}

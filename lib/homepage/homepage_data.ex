@@ -3,6 +3,14 @@ defmodule Homepage.HomepageData do
   alias Homepage.Data.ServiceDeliveryFeature
   alias Homepage.Data.ServiceDeliveryActivity
 
+  def site,
+    do: %{
+      title: "Remote Reason",
+      description:
+        "Remote Reason is a software development company that builds custom software solutions for businesses.",
+      url: "https://remotereason.com"
+    }
+
   def service_web_apps,
     do: %ServiceDelivery{
       name: "Web Apps",

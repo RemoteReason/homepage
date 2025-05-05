@@ -4,14 +4,14 @@ defmodule HomepageWeb.BlogController do
   @layout :blog
 
   alias Homepage.Blog
-  alias HomepageWeb.LinkHelper
+  alias HomepageWeb.HomepagePageData
 
   def index(conn, _params) do
     conn
     |> put_layout(html: @layout)
     |> render("index.html",
       posts: Blog.all_posts(),
-      meta_tags: LinkHelper.get_page_site_open_graph("blog")
+      page_data: HomepagePageData.page_data().blog
     )
   end
 
@@ -22,7 +22,7 @@ defmodule HomepageWeb.BlogController do
     |> put_layout(html: @layout)
     |> render("show.html",
       post: post,
-      meta_tags: LinkHelper.get_blog_post_site_open_graph(post)
+      page_data: HomepagePageData.blog_post_data(post)
     )
   end
 end

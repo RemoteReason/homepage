@@ -61,7 +61,7 @@ defmodule HomepageWeb.LayoutComponents do
       <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex flex-1">
           <div class="hidden lg:flex lg:gap-x-12">
-            <%= for item <- HomepageWeb.LinkHelper.top_navigation() do %>
+            <%= for item <- HomepageWeb.HomepagePageData.top_navigation() do %>
               <.link href={item.url} class="text-sm/6 font-semibold text-gray-900">{item.name}</.link>
             <% end %>
           </div>
@@ -94,7 +94,10 @@ defmodule HomepageWeb.LayoutComponents do
           <img class="h-8 w-auto" src={LinkHelper.image_path("/logo.svg")} alt="" />
         </a>
         <div class="flex flex-1 justify-end">
-          <a href={HomepageWeb.LinkHelper.lets_talk()} class="text-sm/6 font-semibold text-gray-900">
+          <a
+            href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
+            class="text-sm/6 font-semibold text-gray-900"
+          >
             Let's talk
             <span aria-hidden="true">
               <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-2" />
@@ -147,7 +150,7 @@ defmodule HomepageWeb.LayoutComponents do
           class="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm/6"
           aria-label="Footer"
         >
-          <%= for item <- HomepageWeb.LinkHelper.footer_navigation() do %>
+          <%= for item <- HomepageWeb.HomepagePageData.footer_navigation() do %>
             <.link href={item.url} class="text-gray-600 hover:text-gray-900">{item.name}</.link>
           <% end %>
         </nav>
