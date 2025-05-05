@@ -14,7 +14,11 @@
     >
       <%= for client <- Homepage.HomepageData.clients_list() do %>
         <li>
-          <img class="aspect-[3/2] w-full rounded-2xl object-cover" src={client.image} alt="" />
+          <img
+            class="aspect-[3/2] w-full rounded-2xl object-cover"
+            src={HomepageWeb.LinkHelper.image_path(client.image)}
+            alt=""
+          />
           <h3 class="mt-6 text-lg/8 font-semibold tracking-tight text-gray-900">{client.name}</h3>
           <.link href={client.website} class="text-gray-600 hover:text-gray-900 underline">
             > {client.website}
