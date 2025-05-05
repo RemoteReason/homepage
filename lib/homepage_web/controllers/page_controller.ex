@@ -41,6 +41,12 @@ defmodule HomepageWeb.PageController do
     |> render(:privacy_policy)
   end
 
+  def index(conn, %{"page_name" => "cookie_policy"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:cookie_policy)
+  end
+
   def index(conn, %{"page_name" => @default_page}) do
     conn
     |> put_layout(html: @layout)
