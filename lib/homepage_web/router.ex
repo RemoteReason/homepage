@@ -21,7 +21,11 @@ defmodule HomepageWeb.Router do
   scope "/", HomepageWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    get "/", PageController, :index
+    get "/page/:page_name", PageController, :index
+
+    get "/blog", BlogController, :index
+    get "/blog/:id", BlogController, :show
   end
 
   # Other scopes may use custom stacks.
@@ -37,16 +41,6 @@ defmodule HomepageWeb.Router do
     # you can use Plug.BasicAuth to set up some basic authentication
     # as long as you are also using SSL (which you should anyway).
     import Phoenix.LiveDashboard.Router
-
-    scope "/", HomepageWeb do
-      pipe_through :browser
-
-      get "/", PageController, :index
-      get "/page/:page_name", PageController, :index
-
-      get "/blog", BlogController, :index
-      get "/blog/:id", BlogController, :show
-    end
 
     scope "/dev" do
       pipe_through :browser

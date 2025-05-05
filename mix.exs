@@ -60,7 +60,7 @@ defmodule Homepage.MixProject do
       {:makeup_erlang, ">= 0.0.0"},
       {:mdex, "~> 0.6"},
       # Tidewave - LLM API MCP
-      {:tidewave, "~> 0.1"}
+      {:tidewave, "~> 0.1", runtime: Mix.env() == :dev}
     ]
   end
 
