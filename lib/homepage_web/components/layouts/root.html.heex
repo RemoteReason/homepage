@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
 
-    <%!-- <.social_media_share_tags site_open_graph={
-      HomepageWeb.ViewHelpers.get_site_open_graph(@conn.path_info)
-    } /> --%>
+    <.social_media_share_tags site_open_graph={@meta_tags} />
     <.live_title default="Homepage" suffix=" · Phoenix Framework">
       {assigns[:page_title]}
     </.live_title>
