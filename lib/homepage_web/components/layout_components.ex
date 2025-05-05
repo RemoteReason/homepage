@@ -2,6 +2,7 @@ defmodule HomepageWeb.LayoutComponents do
   use HomepageWeb, :html
 
   attr :rows, :integer, default: 1
+  slot :inner_block
 
   def layout_bento_box(assigns) do
     ~H"""
@@ -10,6 +11,8 @@ defmodule HomepageWeb.LayoutComponents do
     </div>
     """
   end
+
+  slot :inner_block
 
   def layout_bento_box_small_container(assigns) do
     ~H"""
@@ -24,6 +27,8 @@ defmodule HomepageWeb.LayoutComponents do
     """
   end
 
+  slot :inner_block
+
   def layout_bento_box_large_container(assigns) do
     ~H"""
     <div class="relative lg:col-span-3">
@@ -37,6 +42,8 @@ defmodule HomepageWeb.LayoutComponents do
     </div>
     """
   end
+
+  slot :inner_block
 
   def layout_page_centered(assigns) do
     ~H"""
