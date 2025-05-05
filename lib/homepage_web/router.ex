@@ -10,6 +10,10 @@ defmodule HomepageWeb.Router do
     plug :put_secure_browser_headers
   end
 
+  pipeline :sitemap do
+    plug :accepts, ["xml"]
+  end
+
   pipeline :api do
     plug :accepts, ["json"]
   end
@@ -50,5 +54,10 @@ defmodule HomepageWeb.Router do
       live_dashboard "/dashboard", metrics: HomepageWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
+  end
+
+  scope "/", HomepageWeb do
+    pipe_through [:sitemap]
+    get "/sitemap.xml", SitemapController, :index
   end
 end

@@ -146,7 +146,7 @@ defmodule HomepageWeb.LayoutComponents do
         </nav>
         <div class="mt-16 flex justify-center gap-x-10">
           <a
-            href={HomepageWeb.LinkHelper.social_links().twitter}
+            href={Homepage.HomepageData.social_links().twitter}
             class="text-gray-600 hover:text-gray-800"
           >
             <span class="sr-only">X</span>
@@ -155,7 +155,7 @@ defmodule HomepageWeb.LayoutComponents do
             </svg>
           </a>
           <a
-            href={HomepageWeb.LinkHelper.social_links().github}
+            href={Homepage.HomepageData.social_links().github}
             class="text-gray-600 hover:text-gray-800"
           >
             <span class="sr-only">GitHub</span>
@@ -168,7 +168,7 @@ defmodule HomepageWeb.LayoutComponents do
             </svg>
           </a>
           <a
-            href={HomepageWeb.LinkHelper.social_links().linkedin}
+            href={Homepage.HomepageData.social_links().linkedin}
             class="text-gray-600 hover:text-gray-800"
           >
             <span class="sr-only">LinkedIn</span>

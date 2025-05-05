@@ -1,7 +1,7 @@
 defmodule Homepage.Blog.MarkdownConverter do
   alias Homepage.Blog.MDExMermaid
 
-  def convert(filepath, body, _attrs, opts) do
+  def convert(filepath, body, _attrs, _opts) do
     if Path.extname(filepath) in [".md", ".markdown"] do
       html =
         MDEx.new()
