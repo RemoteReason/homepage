@@ -55,6 +55,18 @@ defmodule HomepageWeb.LinkHelper do
       url: ~p"/page/mobile_apps"
     }
 
+  def privacy_policy,
+    do: %{
+      name: "Privacy Policy",
+      url: ~p"/page/privacy_policy"
+    }
+
+  def cookie_policy,
+    do: %{
+      name: "Cookie Policy",
+      url: ~p"/page/cookie_policy"
+    }
+
   def footer_navigation do
     [
       what_we_do(),
@@ -62,7 +74,9 @@ defmodule HomepageWeb.LinkHelper do
       web_apps(),
       mobile_apps(),
       clients(),
-      blog()
+      blog(),
+      privacy_policy(),
+      cookie_policy()
     ]
   end
 
