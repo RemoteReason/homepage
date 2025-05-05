@@ -4,14 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="csrf-token" content={get_csrf_token()} />
+
+    <%!-- <.social_media_share_tags site_open_graph={
+      HomepageWeb.ViewHelpers.get_site_open_graph(@conn.path_info)
+    } /> --%>
     <.live_title default="Homepage" suffix=" · Phoenix Framework">
       {assigns[:page_title]}
     </.live_title>
     <link phx-track-static rel="stylesheet" href={~p"/assets/app.css"} />
     <script defer phx-track-static type="text/javascript" src={~p"/assets/app.js"}>
     </script>
+    <.google_tag_manager_script_head />
   </head>
   <body class="bg-white">
     {@inner_content}
+    <.google_tag_manager_script_body />
   </body>
 </html>
