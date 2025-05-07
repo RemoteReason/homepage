@@ -96,7 +96,7 @@ defmodule HomepageWeb.LayoutComponents do
         <div class="flex flex-1 justify-end">
           <a
             href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
-            class="text-sm/6 font-semibold text-gray-900"
+            class="text-sm/6 font-semibold text-gray-900 font-mono"
           >
             Let's talk
             <span aria-hidden="true">

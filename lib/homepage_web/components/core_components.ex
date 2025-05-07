@@ -676,12 +676,12 @@ defmodule HomepageWeb.CoreComponents do
 
   def brand_banner(assigns) do
     ~H"""
-    <div class="mx-auto max-w-2xl lg:text-center">
-      <h2 class="text-base/7 font-semibold text-indigo-600">for AI first companies</h2>
-      <p class="p-4 mt-2 text-pretty text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-balance rounded-lg bg-black">
+    <div class="mx-auto max-w-2xl lg:text-center font-mono">
+      <h2 class="text-base/7 font-semibold text-indigo-600 font-mono">for AI first companies</h2>
+      <p class="p-4 mt-2 text-pretty text-4xl tracking-tight text-white sm:text-5xl lg:text-balance rounded-lg bg-black">
         we build software for humans and bots<span class="animate-pulse">_</span>
       </p>
-      <p class="mt-6 text-lg/8 text-gray-600">
+      <p class="mt-6 text-lg/8 text-gray-600 font-semibold font-mono">
         AI sparkles <.icon name="hero-sparkles" class="h-5 w-5 px-2 text-indigo-600" />
         apps and clouds
       </p>
@@ -693,14 +693,13 @@ defmodule HomepageWeb.CoreComponents do
     ~H"""
     <div class="bg-white">
       <div class="mx-auto max-w-7xl px-6 py-2 sm:py-2 lg:flex lg:items-center lg:justify-between lg:px-8">
-        <span class="max-w-2xl text-2xl font-bold tracking-tight">
-          Get ready to build your AI native product.<br />Curious about what's possible?
-          <span class="animate-pulse bg-black">_</span>
+        <span class="max-w-2xl text-2xl font-semibold tracking-tight font-mono">
+          Get ready to build your AI native product.<br />Curious about what's possible?<span class="animate-pulse bg-black">_</span>
         </span>
         <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
           <a
             href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
-            class="rounded-md bg-black px-8 py-4 text-sm font-semibold text-white shadow-sm"
+            class="rounded-md bg-black px-8 py-4 text-sm font-semibold text-white shadow-sm font-mono"
           >
             Let's talk
             <span aria-hidden="true">
