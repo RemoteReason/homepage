@@ -75,7 +75,9 @@ defmodule HomepageWeb.Layouts do
         <div class="flex flex-1">
           <div class="hidden lg:flex lg:gap-x-12">
             <%= for item <- HomepageWeb.HomepagePageData.top_navigation() do %>
-              <.link href={item.url} class="text-sm/6 font-semibold text-gray-900">{item.name}</.link>
+              <.link href={item.url} class="text-lg font-semibold text-gray-900 font-mono">
+                {item.name}
+              </.link>
             <% end %>
           </div>
           <div class="flex lg:hidden">
