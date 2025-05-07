@@ -1,37 +1,45 @@
-
 <div class="bg-white px-6 py-12 lg:px-8">
-
   <div class="lg:flex lg:items-center lg:justify-between">
     <div class="min-w-0 flex-1">
-      <h2 class="text-2xl/7 font-bold text-gray-900 sm:text-3xl sm:tracking-tight"><%= @post.title %></h2>
+      <h2 class="text-2xl/7 font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
+        {@post.title}
+      </h2>
       <div class="mt-1 flex flex-col sm:mt-0 sm:flex-row sm:flex-wrap sm:space-x-6">
         <div class="mt-2 flex items-center text-sm text-gray-500 py-2">
           <.icon name="hero-user" class="h-5 w-5 px-2" />
-          <span class="px-2"><%= @post.author %></span>
+          <span class="px-2">{@post.author}</span>
         </div>
 
         <div class="mt-2 flex items-center text-sm text-gray-500 py-2">
           <.icon name="hero-calendar" class="h-5 w-5 px-2" />
-          <time class="px-2"><%= @post.date %></time>
+          <time class="px-2">{@post.date}</time>
         </div>
 
         <div class="mt-2 flex items-center text-sm text-gray-500 py-2">
           <.icon name="hero-tag" class="h-5 w-5" />
           <span class="px-2">
-              <%= for tag <- @post.tags do %>
-          <.link href={LinkHelper.blog_post_show(@post)} 
-          class="inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium
-          text-gray-600 ring-1 ring-inset ring-gray-500/10"><%= tag %></.link>
-              <% end %>
-              </span>
+            <%= for tag <- @post.tags do %>
+              <.link
+                href={LinkHelper.blog_post_show(@post)}
+                class="inline-flex items-center rounded-full bg-gray-50 px-2 py-1 text-xs font-medium
+          text-gray-600 ring-1 ring-inset ring-gray-500/10"
+              >
+                {tag}
+              </.link>
+            <% end %>
+          </span>
         </div>
-
       </div>
     </div>
   </div>
 
-  <img src={LinkHelper.blog_post_thumbnail_path(@post)} alt={@post.title} class="w-full h-auto py-4" />
+  <img
+    src={LinkHelper.blog_post_thumbnail_path(@post)}
+    alt={@post.title}
+    class="w-full h-auto py-4"
+  />
   <div class="mx-auto max-w-3xl py-8 text-base/7 text-gray-700">
-    <%= raw @post.body %>
+    {raw(@post.body)}
   </div>
 </div>
+<.lets_talk_cta />

@@ -688,4 +688,28 @@ defmodule HomepageWeb.CoreComponents do
     </div>
     """
   end
+
+  def lets_talk_cta(assigns) do
+    ~H"""
+    <div class="bg-white">
+      <div class="mx-auto max-w-7xl px-6 py-2 sm:py-2 lg:flex lg:items-center lg:justify-between lg:px-8">
+        <span class="max-w-2xl text-2xl font-bold tracking-tight">
+          Get ready to build your AI native product.<br />Curious about what's possible?
+          <span class="animate-pulse bg-black">_</span>
+        </span>
+        <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
+          <a
+            href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
+            class="rounded-md bg-black px-8 py-4 text-sm font-semibold text-white shadow-sm"
+          >
+            Let's talk
+            <span aria-hidden="true">
+              <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-4" />
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+    """
+  end
 end

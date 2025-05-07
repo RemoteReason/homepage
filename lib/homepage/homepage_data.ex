@@ -135,9 +135,9 @@ defmodule Homepage.HomepageData do
           ]
         },
         %ServiceDeliveryActivity{
-          name: "AI API integration",
+          name: "AI deployment",
           description:
-            "We integrate your software with private AI deployments or AI service providers like OpenAI or Midjourney (and many others).",
+            "We deploy custom AI models alongside your software. You keep full control on your business data.",
           items: [
             "Custom AI model deployments",
             "On premise & private clouds",
@@ -145,9 +145,9 @@ defmodule Homepage.HomepageData do
           ]
         },
         %ServiceDeliveryActivity{
-          name: "AI API integration",
+          name: "AI finetuning",
           description:
-            "We integrate your software with private AI deployments or AI service providers like OpenAI or Midjourney (and many others).",
+            "We finetune custom or commerial AI models with your own business data. We make the AI system truly yours.",
           items: [
             "Training on private documents",
             "Finetuning LLM's with human feedback",

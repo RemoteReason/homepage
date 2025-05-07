@@ -107,15 +107,17 @@ defmodule HomepageWeb.Layouts do
           <img class="h-8 w-auto" src={LinkHelper.image_path("/logo.svg")} alt="" />
         </a>
         <div class="flex flex-1 justify-end">
-          <a
-            href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
-            class="text-sm/6 font-semibold text-gray-900"
-          >
-            {HomepageWeb.HomepagePageData.page_data().lets_talk.name}
-            <span aria-hidden="true">
-              <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-2" />
-            </span>
-          </a>
+          <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
+            <a
+              href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
+              class="rounded-md bg-black px-4 py-4 text-sm font-semibold text-white shadow-sm"
+            >
+              Let's talk
+              <span aria-hidden="true">
+                <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-2" />
+              </span>
+            </a>
+          </div>
         </div>
       </nav>
       <!-- Mobile menu, show/hide based on menu open state. -->
