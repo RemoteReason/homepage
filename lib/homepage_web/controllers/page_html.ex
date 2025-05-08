@@ -52,7 +52,7 @@ defmodule HomepageWeb.PageHTML do
                   <div class="relative pl-9">
                     <dt class="inline font-semibold text-gray-900">
                       <.icon
-                        name={feature.icon_name}
+                        name="hero-information-circle"
                         class="absolute left-1 top-1 size-5 text-indigo-600"
                       />
                       {feature.name}
