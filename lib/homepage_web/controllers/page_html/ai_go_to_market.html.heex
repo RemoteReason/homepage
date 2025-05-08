@@ -1,0 +1,25 @@
+<.layout_page_centered>
+  <.content_page_header
+    title={HomepageData.service_ai_go_to_market().name}
+    description={HomepageData.service_ai_go_to_market().description}
+  />
+  <.layout_bento_box rows={1}>
+    <%= for activity <- HomepageData.service_ai_go_to_market().activities do %>
+      <.layout_bento_box_small_container>
+        <.content_list_items
+          title={activity.name}
+          description={activity.description}
+          items={activity.items}
+        />
+      </.layout_bento_box_small_container>
+    <% end %>
+  </.layout_bento_box>
+
+  <.details_features_card
+    title="What do you get?"
+    image={HomepageWeb.LinkHelper.image_path(HomepageData.service_ai_go_to_market().image)}
+    description={HomepageData.service_ai_go_to_market().delivery_description}
+    features={HomepageData.service_ai_go_to_market().delivery_features}
+  />
+  <.lets_talk_cta />
+</.layout_page_centered>

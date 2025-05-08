@@ -18,6 +18,18 @@ defmodule HomepageWeb.PageController do
     |> render(:lets_talk, page_data: HomepagePageData.page_data().lets_talk)
   end
 
+  def index(conn, %{"page_name" => "ai_product_strategy"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:ai_product_strategy, page_data: HomepagePageData.page_data().ai_product_strategy)
+  end
+
+  def index(conn, %{"page_name" => "ai_go_to_market"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:ai_go_to_market, page_data: HomepagePageData.page_data().ai_go_to_market)
+  end
+
   def index(conn, %{"page_name" => "ai_engineering"}) do
     conn
     |> put_layout(html: @layout)

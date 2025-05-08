@@ -33,21 +33,25 @@
   </p>
   <.layout_bento_box rows={2}>
     <.layout_bento_box_large_container>
-      <.content_card_image_with_text
-        title="AI product strategies"
-        subtitle="Delight your customers with AI sparkles"
-        description="We strategically place AI features so that they help your customers and bring value to your business."
-        image={LinkHelper.image_path("/home/ai_strategies.svg")}
-      />
+      <.link href={HomepageWeb.HomepagePageData.page_data().ai_product_strategy.url}>
+        <.content_card_image_with_text
+          title={HomepageData.service_ai_product_strategy().name}
+          subtitle={HomepageData.service_ai_product_strategy().subtitle}
+          description={HomepageData.service_ai_product_strategy().description}
+          image={LinkHelper.image_path(HomepageData.service_ai_product_strategy().image)}
+        />
+      </.link>
     </.layout_bento_box_large_container>
 
     <.layout_bento_box_large_container>
-      <.content_card_image_with_text
-        title="AI Go To Market"
-        subtitle="Growth driven by humans & bots"
-        description="We amplify your growth team with AI integrations and automation."
-        image={LinkHelper.image_path("/home/ai_gtm.svg")}
-      />
+      <.link href={HomepageWeb.HomepagePageData.page_data().ai_go_to_market.url}>
+        <.content_card_image_with_text
+          title={HomepageData.service_ai_go_to_market().name}
+          subtitle={HomepageData.service_ai_go_to_market().subtitle}
+          description={HomepageData.service_ai_go_to_market().description}
+          image={LinkHelper.image_path(HomepageData.service_ai_go_to_market().image)}
+        />
+      </.link>
     </.layout_bento_box_large_container>
 
     <.layout_bento_box_small_container>

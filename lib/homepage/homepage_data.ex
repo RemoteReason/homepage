@@ -11,6 +11,113 @@ defmodule Homepage.HomepageData do
       url: "https://remotereason.com"
     }
 
+  def service_ai_product_strategy,
+    do: %ServiceDelivery{
+      name: "AI Strategy",
+      subtitle: "Delight your customers with AI sparkles",
+      description:
+        "We strategically place AI features so that they help your customers and bring value to your business.",
+      image: "/home/ai_strategies.svg",
+      activities: [
+        %ServiceDeliveryActivity{
+          name: "Web frontend",
+          description:
+            "We build frontends with Phoenix Liveview or React with JS/TS. Tailwind or similar for CSS. Visualisations with D3 & WebGL.",
+          items: ["Beautifull in all browsers", "Mobile & tablet ready", "Rich media experience"]
+        },
+        %ServiceDeliveryActivity{
+          name: "Backend server",
+          description:
+            "We deliver with Phoenix/Elixir. Node with JS/TS. Scala/Java/Akka. Various SQL/noSQL databases.",
+          items: [
+            "Scalable & secure",
+            "Ready for integrations",
+            "Easy to change"
+          ]
+        },
+        %ServiceDeliveryActivity{
+          name: "DevOps",
+          description:
+            "We take care of CI/CD. We deploy on AWS or CGP but also on PaaS like Render or Fly. Kubernetes as well.",
+          items: ["Fully automated", "Fully automated", "Cost effective"]
+        }
+      ],
+      delivery_description: "Your web app is crafted with care for the overall business value.",
+      delivery_features: [
+        %ServiceDeliveryFeature{
+          name: "Look & feel",
+          icon_name: "hero-heart",
+          description:
+            "The web app looks great & feels right on all relevant screen sizes & devices."
+        },
+        %ServiceDeliveryFeature{
+          name: "Performance",
+          icon_name: "hero-bolt",
+          description:
+            "The web app feels fast & smooth. Infrastructure automatically grows to handle the load."
+        },
+        %ServiceDeliveryFeature{
+          name: "Secure",
+          icon_name: "hero-shield-check",
+          description:
+            "The user data & communication is secure. All data handling complies with relevant regulations."
+        }
+      ]
+    }
+
+  def service_ai_go_to_market,
+    do: %ServiceDelivery{
+      name: "AI GTM",
+      subtitle: "Growth driven by humans & bots",
+      description: "We amplify your growth team with AI integrations and automation.",
+      image: "/home/ai_gtm.svg",
+      activities: [
+        %ServiceDeliveryActivity{
+          name: "Web frontend",
+          description:
+            "We build frontends with Phoenix Liveview or React with JS/TS. Tailwind or similar for CSS. Visualisations with D3 & WebGL.",
+          items: ["Beautifull in all browsers", "Mobile & tablet ready", "Rich media experience"]
+        },
+        %ServiceDeliveryActivity{
+          name: "Backend server",
+          description:
+            "We deliver with Phoenix/Elixir. Node with JS/TS. Scala/Java/Akka. Various SQL/noSQL databases.",
+          items: [
+            "Scalable & secure",
+            "Ready for integrations",
+            "Easy to change"
+          ]
+        },
+        %ServiceDeliveryActivity{
+          name: "DevOps",
+          description:
+            "We take care of CI/CD. We deploy on AWS or CGP but also on PaaS like Render or Fly. Kubernetes as well.",
+          items: ["Fully automated", "Fully automated", "Cost effective"]
+        }
+      ],
+      delivery_description: "Your web app is crafted with care for the overall business value.",
+      delivery_features: [
+        %ServiceDeliveryFeature{
+          name: "Look & feel",
+          icon_name: "hero-heart",
+          description:
+            "The web app looks great & feels right on all relevant screen sizes & devices."
+        },
+        %ServiceDeliveryFeature{
+          name: "Performance",
+          icon_name: "hero-bolt",
+          description:
+            "The web app feels fast & smooth. Infrastructure automatically grows to handle the load."
+        },
+        %ServiceDeliveryFeature{
+          name: "Secure",
+          icon_name: "hero-shield-check",
+          description:
+            "The user data & communication is secure. All data handling complies with relevant regulations."
+        }
+      ]
+    }
+
   def service_web_apps,
     do: %ServiceDelivery{
       name: "Web Apps",

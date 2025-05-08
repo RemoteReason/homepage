@@ -7,6 +7,8 @@ defmodule HomepageWeb.HomepagePageData do
   def footer_navigation do
     [
       page_data().what_we_do,
+      page_data().ai_product_strategy,
+      page_data().ai_go_to_market,
       page_data().ai_engineering,
       page_data().web_apps,
       page_data().mobile_apps,
@@ -78,6 +80,23 @@ defmodule HomepageWeb.HomepagePageData do
         description:
           "We are a software development company that builds custom software solutions for businesses.",
         open_graph: get_page_site_open_graph("What we do")
+      },
+      ai_product_strategy: %{
+        category: :services,
+        name: HomepageData.service_ai_product_strategy().name,
+        url: ~p"/page/ai_product_strategy",
+        title: site_title(HomepageData.service_ai_product_strategy().name),
+        description: HomepageData.service_ai_product_strategy().description,
+        open_graph:
+          get_page_site_from_service_open_graph(HomepageData.service_ai_product_strategy())
+      },
+      ai_go_to_market: %{
+        category: :services,
+        name: HomepageData.service_ai_go_to_market().name,
+        url: ~p"/page/ai_go_to_market",
+        title: site_title(HomepageData.service_ai_go_to_market().name),
+        description: HomepageData.service_ai_go_to_market().description,
+        open_graph: get_page_site_from_service_open_graph(HomepageData.service_ai_go_to_market())
       },
       ai_engineering: %{
         category: :services,
