@@ -70,7 +70,7 @@ defmodule HomepageWeb.Layouts do
 
   def site_header(assigns) do
     ~H"""
-    <header class="bg-white">
+    <header class="bg-white max-md:sticky max-md:top-0 max-md:z-50">
       <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex flex-1">
           <div class="hidden lg:flex lg:gap-x-12">
@@ -82,6 +82,7 @@ defmodule HomepageWeb.Layouts do
           </div>
           <div class="flex lg:hidden">
             <button
+              phx-click={show_modal("hamburger-menu")}
               type="button"
               class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
             >
@@ -109,7 +110,7 @@ defmodule HomepageWeb.Layouts do
           <img class="h-8 w-auto" src={LinkHelper.image_path("/logo.svg")} alt="" />
         </a>
         <div class="flex flex-1 justify-end">
-          <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
+          <div class="max-sm:hidden flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
             <a
               href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
               class="rounded-md bg-black px-4 py-4 text-sm font-semibold text-white shadow-sm"
@@ -122,39 +123,64 @@ defmodule HomepageWeb.Layouts do
           </div>
         </div>
       </nav>
-      <!-- Mobile menu, show/hide based on menu open state. -->
-      <%!-- <div class="lg:hidden" role="dialog" aria-modal="true">
-    <!-- Background backdrop, show/hide based on slide-over state. -->
-    <div class="fixed inset-0 z-10"></div>
-    <div class="fixed inset-y-0 left-0 z-10 w-full overflow-y-auto bg-white px-6 py-6">
-      <div class="flex items-center justify-between">
-        <div class="flex flex-1">
-          <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
-            <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-            </svg>
-          </button>
+      <.modal
+        id="hamburger-menu"
+        backdrop="bg-black bg-opacity-70"
+        close_button={false}
+        outer_padding="p-0"
+        inner_padding="px-5 py-5"
+        modal_alignment="items-center"
+      >
+        <div class="flex flex-col gap-8 w-full h-screen">
+          <div class="flex w-full items-center justify-between">
+            <div class="flex items-center gap-2">
+              <a href={~p"/"} class="-m-1.5 p-1.5">
+                <span class="sr-only">Remote Reason</span>
+                <img class="h-8 w-auto" src={LinkHelper.image_path("/logo.svg")} alt="" />
+              </a>
+            </div>
+            <button
+              phx-click={hide_modal("hamburger-menu")}
+              type="button"
+              class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
+            >
+              <span class="sr-only">Close main menu</span>
+              <svg
+                class="size-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke-width="1.5"
+                stroke="currentColor"
+                aria-hidden="true"
+                data-slot="icon"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+          <div class="flex flex-col items-start justify-center space-y-6 w-full">
+            <a
+              href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
+              class="text-sm/6 font-semibold text-gray-900"
+            >
+              Let's talk
+              <span aria-hidden="true">
+                <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-2" />
+              </span>
+            </a>
+            <div class="mt-6 space-y-2">
+              <%= for item <- HomepageWeb.HomepagePageData.top_navigation() do %>
+                <.link
+                  href={item.url}
+                  class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50"
+                >
+                  {item.name}
+                </.link>
+              <% end %>
+            </div>
+          </div>
         </div>
-        <a href="#" class="-m-1.5 p-1.5">
-          <span class="sr-only">Your Company</span>
-          <img class="h-8 w-auto" src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="">
-        </a>
-        <div class="flex flex-1 justify-end">
-      <a href={HomepageWeb.LinkHelper.lets_talk()} class="text-sm/6 font-semibold text-gray-900">Let's talk
-      <span aria-hidden="true">
-      <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-2" />
-      </span></a>
-    </div>
-      </div>
-      <div class="mt-6 space-y-2">
-        <%= for item <- HomepageWeb.LinkHelper.top_navigation() do %>
-          <.link href={item.url} class="-mx-3 block rounded-lg px-3 py-2 text-base/7 font-semibold text-gray-900 hover:bg-gray-50">{item.name}</.link>
-        <% end %>
-
-      </div>
-    </div>
-    </div> --%>
+      </.modal>
     </header>
     """
   end

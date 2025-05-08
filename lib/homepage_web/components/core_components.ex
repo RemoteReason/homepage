@@ -38,7 +38,16 @@ defmodule HomepageWeb.CoreComponents do
   """
   attr :id, :string, required: true
   attr :show, :boolean, default: false
+  attr :backdrop, :string, default: "bg-[#1B1503]"
   attr :on_cancel, JS, default: %JS{}
+  attr :close_button, :boolean, default: true
+  attr :inner_padding, :string, default: "p-14"
+  attr :outer_padding, :string, default: "p-4 sm:p-6 lg:py-8"
+  attr :background_color, :string, default: "bg-white"
+  attr :modal_alignment, :string, default: "items-center"
+  attr :width, :string, default: "w-full max-w-6xl"
+  attr :message, :atom
+  attr :target, :any
   slot :inner_block, required: true
 
   def modal(assigns) do
@@ -48,27 +57,31 @@ defmodule HomepageWeb.CoreComponents do
       phx-mounted={@show && show_modal(@id)}
       phx-remove={hide_modal(@id)}
       data-cancel={JS.exec(@on_cancel, "phx-remove")}
-      class="relative z-50 hidden"
+      class="relative z-40 hidden modal"
     >
-      <div id={"#{@id}-bg"} class="bg-zinc-50/90 fixed inset-0 transition-opacity" aria-hidden="true" />
       <div
-        class="fixed inset-0 overflow-y-auto"
+        id={"#{@id}-bg"}
+        class={[@backdrop, "fixed inset-0 transition-opacity"]}
+        aria-hidden="true"
+      />
+      <div
+        class="fixed inset-0"
         aria-labelledby={"#{@id}-title"}
         aria-describedby={"#{@id}-description"}
         role="dialog"
         aria-modal="true"
         tabindex="0"
       >
-        <div class="flex min-h-full items-center justify-center">
-          <div class="w-full max-w-3xl p-4 sm:p-6 lg:py-8">
+        <div class={"flex min-h-full #{@modal_alignment} justify-center"}>
+          <div class={"#{@width} #{@outer_padding}"}>
             <.focus_wrap
               id={"#{@id}-container"}
               phx-window-keydown={JS.exec("data-cancel", to: "##{@id}")}
               phx-key="escape"
               phx-click-away={JS.exec("data-cancel", to: "##{@id}")}
-              class="shadow-zinc-700/10 ring-zinc-700/10 relative hidden rounded-2xl bg-white p-14 shadow-lg ring-1 transition"
+              class={"shadow-zinc-700/10 ring-zinc-700/10 relative hidden max-sm:rounded-none rounded-2xl #{@inner_padding} shadow-lg ring-1 transition #{@background_color} "}
             >
-              <div class="absolute top-6 right-5">
+              <div :if={@close_button} class="absolute top-6 right-5">
                 <button
                   phx-click={JS.exec("data-cancel", to: "##{@id}")}
                   type="button"
