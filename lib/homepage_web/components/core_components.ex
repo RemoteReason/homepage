@@ -710,15 +710,7 @@ defmodule HomepageWeb.CoreComponents do
           Get ready to build your AI native product.<br />Curious about what's possible?<span class="animate-pulse bg-black">_</span>
         </span>
         <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
-          <a
-            href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
-            class="rounded-md bg-black px-8 py-4 text-sm font-semibold text-white shadow-sm font-mono"
-          >
-            Let's talk
-            <span aria-hidden="true">
-              <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-4" />
-            </span>
-          </a>
+          <.lets_talk_button />
         </div>
       </div>
     </div>
@@ -793,6 +785,20 @@ defmodule HomepageWeb.CoreComponents do
         {@label}
       </p>
     </div>
+    """
+  end
+
+  def lets_talk_button(assigns) do
+    ~H"""
+    <a
+      href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
+      class="rounded-md bg-black px-8 py-4 text-sm font-semibold text-white shadow-sm font-mono"
+    >
+      Let's talk
+      <span aria-hidden="true">
+        <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-4" />
+      </span>
+    </a>
     """
   end
 end

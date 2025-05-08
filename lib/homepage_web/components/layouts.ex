@@ -111,15 +111,7 @@ defmodule HomepageWeb.Layouts do
         </a>
         <div class="flex flex-1 justify-end">
           <div class="max-sm:hidden flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
-            <a
-              href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
-              class="rounded-md bg-black px-4 py-4 text-sm font-semibold text-white shadow-sm"
-            >
-              Let's talk
-              <span aria-hidden="true">
-                <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-2" />
-              </span>
-            </a>
+            <.lets_talk_button />
           </div>
         </div>
       </nav>
@@ -159,15 +151,7 @@ defmodule HomepageWeb.Layouts do
             </button>
           </div>
           <div class="flex flex-col items-start justify-center space-y-6 w-full">
-            <a
-              href={HomepageWeb.HomepagePageData.page_data().lets_talk.url}
-              class="text-sm/6 font-semibold text-gray-900"
-            >
-              Let's talk
-              <span aria-hidden="true">
-                <.icon name="hero-chat-bubble-left-right" class="h-5 w-5 px-2" />
-              </span>
-            </a>
+            <.lets_talk_button />
             <div class="mt-6 space-y-2">
               <%= for item <- HomepageWeb.HomepagePageData.top_navigation() do %>
                 <.link
