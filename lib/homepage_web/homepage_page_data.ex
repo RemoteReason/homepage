@@ -47,6 +47,7 @@ defmodule HomepageWeb.HomepagePageData do
   def page_data do
     %{
       blog: %{
+        category: :company,
         name: "Blog",
         url: ~p"/blog",
         title: site_title("Blog"),
@@ -54,13 +55,23 @@ defmodule HomepageWeb.HomepagePageData do
         open_graph: get_page_site_open_graph("Blog")
       },
       lets_talk: %{
+        category: :company,
         name: "Let's talk",
         url: ~p"/page/lets_talk",
         title: site_title("Let's talk"),
         description: "Let's talk about your project",
         open_graph: get_page_site_open_graph("Let's talk")
       },
+      clients: %{
+        category: :company,
+        name: "Clients",
+        url: ~p"/page/clients",
+        title: site_title("Clients"),
+        description: "Our clients",
+        open_graph: get_page_site_open_graph("Clients")
+      },
       what_we_do: %{
+        category: :company,
         name: "What we do",
         url: ~p"/page/what_we_do",
         title: site_title("What we do"),
@@ -68,14 +79,8 @@ defmodule HomepageWeb.HomepagePageData do
           "We are a software development company that builds custom software solutions for businesses.",
         open_graph: get_page_site_open_graph("What we do")
       },
-      clients: %{
-        name: "Clients",
-        url: ~p"/page/clients",
-        title: site_title("Clients"),
-        description: "Our clients",
-        open_graph: get_page_site_open_graph("Clients")
-      },
       ai_engineering: %{
+        category: :service,
         name: HomepageData.service_ai_engineering().name,
         url: ~p"/page/ai_engineering",
         title: site_title(HomepageData.service_ai_engineering().name),
@@ -83,6 +88,7 @@ defmodule HomepageWeb.HomepagePageData do
         open_graph: get_page_site_from_service_open_graph(HomepageData.service_ai_engineering())
       },
       mobile_apps: %{
+        category: :service,
         name: HomepageData.service_mobile_apps().name,
         url: ~p"/page/mobile_apps",
         title: site_title(HomepageData.service_mobile_apps().name),
@@ -90,6 +96,7 @@ defmodule HomepageWeb.HomepagePageData do
         open_graph: get_page_site_from_service_open_graph(HomepageData.service_mobile_apps())
       },
       web_apps: %{
+        category: :service,
         name: HomepageData.service_web_apps().name,
         url: ~p"/page/web_apps",
         title: site_title(HomepageData.service_web_apps().name),
@@ -97,6 +104,7 @@ defmodule HomepageWeb.HomepagePageData do
         open_graph: get_page_site_from_service_open_graph(HomepageData.service_web_apps())
       },
       privacy_policy: %{
+        category: :legal,
         name: "Privacy Policy",
         url: ~p"/page/privacy_policy",
         title: site_title("Privacy Policy"),
@@ -104,6 +112,7 @@ defmodule HomepageWeb.HomepagePageData do
         open_graph: get_page_site_open_graph("Privacy Policy")
       },
       cookie_policy: %{
+        category: :legal,
         name: "Cookie Policy",
         url: ~p"/page/cookie_policy",
         title: site_title("Cookie Policy"),
