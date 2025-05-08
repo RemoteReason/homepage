@@ -20,47 +20,56 @@ defmodule Homepage.HomepageData do
       image: "/home/ai_strategies.svg",
       activities: [
         %ServiceDeliveryActivity{
-          name: "Web frontend",
+          name: "Product",
           description:
-            "We build frontends with Phoenix Liveview or React with JS/TS. Tailwind or similar for CSS. Visualisations with D3 & WebGL.",
-          items: ["Beautifull in all browsers", "Mobile & tablet ready", "Rich media experience"]
-        },
-        %ServiceDeliveryActivity{
-          name: "Backend server",
-          description:
-            "We deliver with Phoenix/Elixir. Node with JS/TS. Scala/Java/Akka. Various SQL/noSQL databases.",
+            "Embedding AI directly into core product features to enhance product value.",
           items: [
-            "Scalable & secure",
-            "Ready for integrations",
-            "Easy to change"
+            "Personalize interfaces, recommend content, or automate user tasks",
+            "Add predictive models or decision support into product workflows",
+            "Collect feedback to iteratively improve AI models in-product"
           ]
         },
         %ServiceDeliveryActivity{
-          name: "DevOps",
+          name: "Data",
           description:
-            "We take care of CI/CD. We deploy on AWS or CGP but also on PaaS like Render or Fly. Kubernetes as well.",
-          items: ["Fully automated", "Fully automated", "Cost effective"]
+            "Leverage proprietary data assets as a foundation for differentiated AI models and insights.",
+          items: [
+            "Collect high-quality, unique user data to reinforce AI model performance",
+            "Augment limited datasets with synthetic examples, enhancing model robustness",
+            "Package insights, APIs, or analytics built on data assets into new revenue-generating offerings"
+          ]
+        },
+        %ServiceDeliveryActivity{
+          name: "Platform",
+          description:
+            "Providing AI infrastructure, APIs, or tools to enable others to build AI-powered solutions.",
+          items: [
+            "Expose powerful models via APIs (e.g., image recognition, NLP) for developer and enterprise use",
+            "Build low code / no code platforms that allow non-technical users to create and deploy models",
+            "Develop third-party plugin ecosystems, SDKs, or marketplaces that expand your AI reach."
+          ]
         }
       ],
-      delivery_description: "Your web app is crafted with care for the overall business value.",
+      delivery_description:
+        "A clear AI strategy and roadmap that is adapted to your existing product and future vision.",
       delivery_features: [
         %ServiceDeliveryFeature{
-          name: "Look & feel",
+          name: "Clear",
           icon_name: "hero-heart",
           description:
-            "The web app looks great & feels right on all relevant screen sizes & devices."
+            "Clear goals, priorities, and the rationale behind choices. No jargon or ambiguity. Ensures alignment across teams and enables faster, more confident decision-making."
         },
         %ServiceDeliveryFeature{
-          name: "Performance",
+          name: "Actionable",
           icon_name: "hero-bolt",
           description:
-            "The web app feels fast & smooth. Infrastructure automatically grows to handle the load."
+            "Specific, achievable initiatives with clear owners, timelines, and priority levels. Translates vision into execution and helps allocate resources effectively"
         },
         %ServiceDeliveryFeature{
-          name: "Secure",
+          name: "Grounded",
           icon_name: "hero-shield-check",
           description:
-            "The user data & communication is secure. All data handling complies with relevant regulations."
+            "Based on an understanding of customer needs, market dynamics, and internal capabilities. Keeps you resilient, relevant, and more likely to give you a competitive advantage"
         }
       ]
     }
