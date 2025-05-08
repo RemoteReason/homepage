@@ -82,47 +82,52 @@ defmodule Homepage.HomepageData do
       image: "/home/ai_gtm.svg",
       activities: [
         %ServiceDeliveryActivity{
-          name: "Web frontend",
+          name: "Direct Customer Adoption",
           description:
-            "We build frontends with Phoenix Liveview or React with JS/TS. Tailwind or similar for CSS. Visualisations with D3 & WebGL.",
-          items: ["Beautifull in all browsers", "Mobile & tablet ready", "Rich media experience"]
-        },
-        %ServiceDeliveryActivity{
-          name: "Backend server",
-          description:
-            "We deliver with Phoenix/Elixir. Node with JS/TS. Scala/Java/Akka. Various SQL/noSQL databases.",
+            "Reaching end-users or decision-makers directly to drive adoption and engagement.",
           items: [
-            "Scalable & secure",
-            "Ready for integrations",
-            "Easy to change"
+            "Bottom-Up Product-Led Growth",
+            "Customer Education & Evangelism",
+            "Use-Case-Focused Positioning"
           ]
         },
         %ServiceDeliveryActivity{
-          name: "DevOps",
+          name: "Channel & Partner-Led Growth",
           description:
-            "We take care of CI/CD. We deploy on AWS or CGP but also on PaaS like Render or Fly. Kubernetes as well.",
-          items: ["Fully automated", "Fully automated", "Cost effective"]
+            "Leveraging existing ecosystems and partners to scale faster and enter new markets.",
+          items: [
+            "OEM & Embedded AI Partnerships",
+            "Cloud & Marketplace Distribution",
+            "System Integrator Alliances"
+          ]
+        },
+        %ServiceDeliveryActivity{
+          name: "Community & Ecosystem Building",
+          description:
+            "Building a strong network of users, developers, and influencers around your AI offering.",
+          items: ["Developer Engagement", "Developer Engagement", "Thought Leadership"]
         }
       ],
-      delivery_description: "Your web app is crafted with care for the overall business value.",
+      delivery_description:
+        "A comprehensive GTM strategy that leverages both human and AI-powered channels to drive growth.",
       delivery_features: [
         %ServiceDeliveryFeature{
-          name: "Look & feel",
+          name: "Targeting and Segmentation",
           icon_name: "hero-heart",
           description:
-            "The web app looks great & feels right on all relevant screen sizes & devices."
+            "We identify and prioritize the right customer segments, buyer personas, and use cases"
         },
         %ServiceDeliveryFeature{
-          name: "Performance",
+          name: "Cross-Functional Alignment",
           icon_name: "hero-bolt",
           description:
-            "The web app feels fast & smooth. Infrastructure automatically grows to handle the load."
+            "We coordinate roles and timing across product, marketing, sales, customer success, and partners"
         },
         %ServiceDeliveryFeature{
-          name: "Secure",
+          name: "Metrics-Driven and Adaptive",
           icon_name: "hero-shield-check",
           description:
-            "The user data & communication is secure. All data handling complies with relevant regulations."
+            "We focus on clear KPIs (e.g., CAC, conversion rate, retention) and mechanisms for feedback and iteration"
         }
       ]
     }
