@@ -87,7 +87,7 @@ defmodule HomepageWeb.PageHTML do
 
   def content_card_image_with_text(assigns) do
     ~H"""
-    <img class="h-80 object-cover object-left" src={@image} alt="" />
+    <img class="w-full h-80 object-cover object-left" src={@image} alt="" />
     <div class="p-10 pt-4">
       <h3 class="text-sm/4 font-semibold text-indigo-600">{@title}</h3>
       <p class="mt-2 text-lg font-medium tracking-tight text-gray-950">{@subtitle}</p>
