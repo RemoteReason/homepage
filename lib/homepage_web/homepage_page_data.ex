@@ -1,6 +1,5 @@
 defmodule HomepageWeb.HomepagePageData do
   alias Homepage.HomepageData
-  alias Homepage.Deployment
   alias HomepageWeb.LinkHelper
   use HomepageWeb, :verified_routes
 
@@ -149,14 +148,14 @@ defmodule HomepageWeb.HomepagePageData do
         title: site_title(service_delivery.name),
         description: service_delivery.description,
         type: "website",
-        image_url: Deployment.asset_url("/images/socials/facebook_social_meta.png"),
+        image_url: LinkHelper.image_url("/website_social_card.png"),
         image_alt: service_delivery.description
       },
       twitter_x: %{
         url: HomepageData.site().url,
         title: site_title(service_delivery.name),
         description: service_delivery.description,
-        image_url: Deployment.asset_url("/images/socials/twitter_social_meta.png"),
+        image_url: LinkHelper.image_url("/website_social_card.png"),
         image_alt: service_delivery.description,
         site: HomepageData.social_links().twitter,
         card: "summary_large_image"
@@ -177,13 +176,13 @@ defmodule HomepageWeb.HomepagePageData do
         title: site_title,
         description: site_description,
         type: "website",
-        image_url: Deployment.asset_url("/images/socials/facebook_social_meta.png"),
+        image_url: LinkHelper.image_url("/website_social_card.png"),
         image_alt: site_description
       },
       twitter_x: %{
         title: site_title,
         description: site_description,
-        image_url: Deployment.asset_url("/images/socials/twitter_social_meta.png"),
+        image_url: LinkHelper.image_url("/website_social_card.png"),
         image_alt: site_description,
         site: HomepageData.social_links().twitter,
         card: "summary_large_image"

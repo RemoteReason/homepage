@@ -3,6 +3,10 @@ defmodule HomepageWeb.LinkHelper do
 
   alias Homepage.Deployment
 
+  def image_url(image) do
+    Deployment.server_url(image_path(image))
+  end
+
   def image_path(image) do
     Path.join("/images", image)
   end
