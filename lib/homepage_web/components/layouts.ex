@@ -185,8 +185,8 @@ defmodule HomepageWeb.Layouts do
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 flex flex-col items-center">
             <img class="h-9" src={LinkHelper.image_path("/logo.svg")} alt="Company name" />
-            <p class="text-balance text-sm/6 text-gray-600">
-              <span class="font-mono">we build software for humans and bots</span>
+            <p class="text-balance text-sm/6 text-white font-mono bg-black p-2">
+              we build software for humans and bots<span class="animate-pulse">_</span>
             </p>
             <.site_socials />
           </div>
