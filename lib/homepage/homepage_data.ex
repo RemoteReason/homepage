@@ -272,22 +272,10 @@ defmodule Homepage.HomepageData do
             "The AI system understands your own data & functions well for your specific business case."
         },
         %ServiceDeliveryFeature{
-          name: "Testable",
-          icon_name: "hero-list-bullet",
-          description:
-            "The AI system is automatically tested with adequate evals based on human & AI feedback."
-        },
-        %ServiceDeliveryFeature{
           name: "Compliant",
           icon_name: "hero-check-badge",
           description:
             "The AI system is compliant with your company policies, brand guidelines & data protection regulations."
-        },
-        %ServiceDeliveryFeature{
-          name: "Performant",
-          icon_name: "hero-bolt",
-          description:
-            "The AI service performs as expected. Infrastructure automatically grows to handle additional load."
         },
         %ServiceDeliveryFeature{
           name: "Secure",
