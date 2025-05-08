@@ -767,4 +767,19 @@ defmodule HomepageWeb.CoreComponents do
     </div>
     """
   end
+
+  def country_flag(assigns) do
+    ~H"""
+    <div class={["flex items-center gap-2 cursor-pointer p-1"]}>
+      <img
+        src={HomepageWeb.LinkHelper.image_path("/flags/#{@country_code}.svg")}
+        class="size-4"
+        loading="lazy"
+      />
+      <p class="text-sm/6 text-gray-600">
+        {@label}
+      </p>
+    </div>
+    """
+  end
 end

@@ -210,42 +210,54 @@ defmodule Homepage.HomepageData do
         image: client_image.("castmagic.webp"),
         description:
           "AI platform for podcasters. Turn long form audio into ready to use content assets, instantly. 10x your content. Upload your Mp3 and download transcripts, notes, summaries, highlights and more.",
-        website: "castmagic.io"
+        website: "castmagic.io",
+        country_code: "US",
+        location: "Austin / TX"
       },
       %{
         name: "Burohelp",
         image: client_image.("burohelp.webp"),
         description:
           "B2B social network. Burohelp Corporate Responsability Communities connects non-profits with commercial companies that provide volunteer work on demand.",
-        website: "burohelp.com"
+        website: "burohelp.com",
+        country_code: "NL",
+        location: "The Hague"
       },
       %{
         name: "Prisma Net",
         image: client_image.("prisma.webp"),
         description:
           "PrismaNet provides care for 3 000+ people with disabilities. Services include assisted living, day activities, and family support focusing on helping people live as independently as possible.",
-        website: "prismanet.nl"
+        website: "prismanet.nl",
+        country_code: "NL",
+        location: "Waalwijk"
       },
       %{
         name: "MIREX - República Dominicana",
         image: client_image.("dominicana.webp"),
         description:
           "Custom software solution & services delivered for the The Dominican Republic Embassy - Netherlands, The Hague.",
-        website: "mirex.gob.do"
+        website: "mirex.gob.do",
+        country_code: "NL",
+        location: "The Hague"
       },
       %{
         name: "Intersoft",
         image: client_image.("intersoft.webp"),
         description:
           "Intersoft delivers and supports custom-configured solutions. Remote Reason delivered for Intersoft a bespoke document signing platform for contracts at scale (ie. like DocuSign)",
-        website: "intersoft.nl"
+        website: "intersoft.nl",
+        country_code: "FR",
+        location: "Paris"
       },
       %{
         name: "Font Due",
         image: client_image.("fontdue.webp"),
         description:
           "The ecommerce platform for independent type foundries - Build your website. Manage your content. Own distribution. Sell your fonts.",
-        website: "fontdue.com"
+        website: "fontdue.com",
+        country_code: "US",
+        location: "New York / NY"
       }
     ]
   end
