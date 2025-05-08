@@ -162,8 +162,10 @@ defmodule HomepageWeb.Layouts do
   def footer_column(assigns) do
     ~H"""
     <div>
-      <h3 class="text-sm/6 font-semibold text-gray-900">{@category}</h3>
-      <ul role="list" class="mt-6 space-y-4">
+      <h3 class="text-sm/6 font-semibold text-gray-900 mt-4">
+        {Recase.to_title(Atom.to_string(@category))}
+      </h3>
+      <ul role="list" class="mt-2 space-y-2">
         <%= for item <- Enum.filter(HomepageWeb.HomepagePageData.footer_navigation(), &(&1.category == @category)) do %>
           <li>
             <.link href={item.url} class="text-sm/6 text-gray-600 hover:text-gray-900">
@@ -188,9 +190,9 @@ defmodule HomepageWeb.Layouts do
             </p>
             <.site_socials />
           </div>
-          <div class="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
+          <div class="mt-16 grid grid-cols-2 gap-2 xl:col-span-2 xl:mt-0">
             <div class="md:grid md:grid-cols-3 md:gap-8">
-              <.footer_column category={:service} />
+              <.footer_column category={:services} />
               <.footer_column category={:company} />
               <.footer_column category={:legal} />
             </div>

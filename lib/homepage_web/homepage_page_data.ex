@@ -80,7 +80,7 @@ defmodule HomepageWeb.HomepagePageData do
         open_graph: get_page_site_open_graph("What we do")
       },
       ai_engineering: %{
-        category: :service,
+        category: :services,
         name: HomepageData.service_ai_engineering().name,
         url: ~p"/page/ai_engineering",
         title: site_title(HomepageData.service_ai_engineering().name),
@@ -88,7 +88,7 @@ defmodule HomepageWeb.HomepagePageData do
         open_graph: get_page_site_from_service_open_graph(HomepageData.service_ai_engineering())
       },
       mobile_apps: %{
-        category: :service,
+        category: :services,
         name: HomepageData.service_mobile_apps().name,
         url: ~p"/page/mobile_apps",
         title: site_title(HomepageData.service_mobile_apps().name),
@@ -96,7 +96,7 @@ defmodule HomepageWeb.HomepagePageData do
         open_graph: get_page_site_from_service_open_graph(HomepageData.service_mobile_apps())
       },
       web_apps: %{
-        category: :service,
+        category: :services,
         name: HomepageData.service_web_apps().name,
         url: ~p"/page/web_apps",
         title: site_title(HomepageData.service_web_apps().name),

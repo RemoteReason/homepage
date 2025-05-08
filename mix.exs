@@ -59,6 +59,8 @@ defmodule Homepage.MixProject do
       {:makeup_elixir, ">= 0.0.0"},
       {:makeup_erlang, ">= 0.0.0"},
       {:mdex, "~> 0.6"},
+      # Upcasing strings
+      {:recase, "~> 0.8.1"},
       # Tidewave - LLM API MCP
       {:tidewave, "~> 0.1", runtime: Mix.env() == :dev}
     ]
