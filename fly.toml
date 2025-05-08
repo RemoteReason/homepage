@@ -10,7 +10,7 @@ kill_signal = 'SIGTERM'
 [build]
 
 [env]
-  PHX_HOST = 'homepage-young-glitter-9786.fly.dev'
+  PHX_HOST = 'remotereason.com'
   PORT = '8080'
 
 [http_service]
