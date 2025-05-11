@@ -19,6 +19,11 @@ defmodule HomepageWeb.Router do
   end
 
   scope "/", HomepageWeb do
+    pipe_through [:sitemap]
+    get "/sitemap.xml", SitemapController, :index
+  end
+
+  scope "/", HomepageWeb do
     pipe_through :browser
 
     get "/", PageController, :index
@@ -26,6 +31,8 @@ defmodule HomepageWeb.Router do
 
     get "/blog", BlogController, :index
     get "/blog/:id", BlogController, :show
+
+    get "/:catchall", PageController, :index
   end
 
   # Other scopes may use custom stacks.
@@ -48,10 +55,5 @@ defmodule HomepageWeb.Router do
       live_dashboard "/dashboard", metrics: HomepageWeb.Telemetry
       forward "/mailbox", Plug.Swoosh.MailboxPreview
     end
-  end
-
-  scope "/", HomepageWeb do
-    pipe_through [:sitemap]
-    get "/sitemap.xml", SitemapController, :index
   end
 end
