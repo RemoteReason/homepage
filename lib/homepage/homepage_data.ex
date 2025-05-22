@@ -342,13 +342,13 @@ defmodule Homepage.HomepageData do
         location: "Waalwijk"
       },
       %{
-        name: "MIREX - República Dominicana",
-        image: client_image.("dominicana.webp"),
+        name: "NativeDS",
+        image: client_image.("nativedsd.webp"),
         description:
-          "Custom software solution & services delivered for the The Dominican Republic Embassy - Netherlands, The Hague.",
-        website: "mirex.gob.do",
+          "Getting you closer to the original performance. NativeDSD is your best source for recorded music—Stereo, Binaural & 5 Channel Surround Sound DSD & DXD.",
+        website: "www.nativedsd.com/",
         country_code: "NL",
-        location: "The Hague"
+        location: "Utrecht"
       },
       %{
         name: "Intersoft",
