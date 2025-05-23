@@ -342,7 +342,7 @@ defmodule Homepage.HomepageData do
         location: "Waalwijk"
       },
       %{
-        name: "NativeDS",
+        name: "NativeDSD",
         image: client_image.("nativedsd.webp"),
         description:
           "Getting you closer to the original performance. NativeDSD is your best source for recorded music—Stereo, Binaural & 5 Channel Surround Sound DSD & DXD.",
