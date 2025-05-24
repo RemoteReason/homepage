@@ -351,11 +351,11 @@ defmodule Homepage.HomepageData do
         location: "Utrecht"
       },
       %{
-        name: "Intersoft",
-        image: client_image.("intersoft.webp"),
+        name: "Signetta",
+        image: client_image.("signetta.webp"),
         description:
-          "Intersoft delivers and supports custom-configured solutions. Remote Reason delivered for Intersoft a bespoke document signing platform for contracts at scale (ie. like DocuSign)",
-        website: "intersoft.nl",
+          "Signetta is an eIDAS and GDPR-compliant electronic signing platform tailored for industries with high workforce turnover and seasonality—such as cleaning, hospitality, security, contact centers, catering, landscaping, agriculture, and manufacturing.",
+        website: "www.linkedin.com/company/signetta/",
         country_code: "FR",
         location: "Paris"
       },
