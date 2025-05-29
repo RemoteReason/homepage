@@ -769,6 +769,10 @@ defmodule HomepageWeb.CoreComponents do
           </g>
         </svg>
       </a>
+      <a href={Homepage.HomepageData.social_links().clutch} class="text-gray-600 hover:text-gray-800">
+        <span class="sr-only">Clutch</span>
+        <img src={HomepageWeb.LinkHelper.image_url("/clutch_logo.jpg")} class="size-6" />
+      </a>
     </div>
     """
   end

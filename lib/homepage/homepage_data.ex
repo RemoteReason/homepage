@@ -304,7 +304,8 @@ defmodule Homepage.HomepageData do
     %{
       github: "https://github.com/RemoteReason",
       twitter: "https://twitter.com/RemoteReason",
-      linkedin: "https://www.linkedin.com/company/remote-reason"
+      linkedin: "https://www.linkedin.com/company/remote-reason",
+      clutch: "https://www.clutch.co/profile/remote-reason"
     }
   end
 

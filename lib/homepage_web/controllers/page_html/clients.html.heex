@@ -27,7 +27,10 @@
                 label={"#{client.location}, #{client.country_code}"}
               />
             </h3>
-            <.link href={"https://#{client.website}"} class="text-gray-600 hover:text-gray-900 underline">
+            <.link
+              href={"https://#{client.website}"}
+              class="text-gray-600 hover:text-gray-900 underline"
+            >
               > {client.website}
             </.link>
             <p class="text-base/7 text-gray-600">{client.description}</p>
