@@ -194,17 +194,20 @@ defmodule HomepageWeb.Layouts do
       <div class="mx-auto max-w-7xl px-6 pb-8 pt-16 sm:pt-24 lg:px-8 lg:pt-32">
         <div class="xl:grid xl:grid-cols-3 xl:gap-8">
           <div class="space-y-8 flex flex-col items-center">
-            <img class="h-9" src={LinkHelper.image_path("/logo.svg")} alt="Company name" />
+            <img class="h-9" src={LinkHelper.image_path("/logo.svg")} alt="Remote Reason" />
             <p class="text-balance text-sm/6 text-white font-mono bg-black p-2">
               we build software for humans and bots<span class="animate-pulse">_</span>
             </p>
             <.site_socials />
           </div>
-          <div class="mt-16 grid grid-cols-2 gap-2 xl:col-span-2 xl:mt-0">
-            <div class="md:grid md:grid-cols-3 md:gap-8">
+          <div class="mt-16 w-full xl:col-span-2 xl:mt-0">
+            <div class="md:grid md:grid-cols-4 md:gap-8">
               <.footer_column category={:services} />
               <.footer_column category={:company} />
               <.footer_column category={:legal} />
+              <div class="flex justify-end items-start mt-2">
+                <.clutch_widget />
+              </div>
             </div>
           </div>
         </div>

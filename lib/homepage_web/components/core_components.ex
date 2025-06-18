@@ -687,6 +687,28 @@ defmodule HomepageWeb.CoreComponents do
     for {^field, {msg, opts}} <- errors, do: translate_error({msg, opts})
   end
 
+  def clutch_widget(assigns) do
+    ~H"""
+    <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js">
+    </script>
+
+    <div
+      class="clutch-widget"
+      data-url="https://widget.clutch.co"
+      data-widget-type="9"
+      data-height="90"
+      data-nofollow="false"
+      data-expandifr="true"
+      data-header-color="#000000"
+      data-footer-color="#000000"
+      data-primary-color="#4c15e6"
+      data-secondary-color="#4c15e6"
+      data-clutchcompany-id="2243402"
+    >
+    </div>
+    """
+  end
+
   def brand_banner(assigns) do
     ~H"""
     <div class="mx-auto max-w-2xl lg:text-center font-mono">
