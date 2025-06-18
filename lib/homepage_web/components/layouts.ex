@@ -205,7 +205,7 @@ defmodule HomepageWeb.Layouts do
               <.footer_column category={:services} />
               <.footer_column category={:company} />
               <.footer_column category={:legal} />
-              <div class="flex justify-end items-start mt-2">
+              <div class="flex justify-start md:justify-end items-start mt-2">
                 <.clutch_widget />
               </div>
             </div>
