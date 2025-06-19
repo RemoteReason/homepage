@@ -1,16 +1,16 @@
 <.layout_page_centered>
   <.brand_banner />
   <div class="bg-white py-8 sm:py-8">
-    <div class="mx-auto max-w-7xl px-6 lg:px-8">
-      <div class="mx-auto max-w-2xl lg:max-w-4xl">
+    <div class="mx-auto max-w-[1400px] px-6 lg:px-8">
+      <div class="mx-auto max-w-[1400px]">
         <h2 class="text-pretty text-4xl font-semibold tracking-tight text-gray-900 sm:text-5xl">
           Blog
         </h2>
         <p class="mt-2 text-lg/8 text-gray-600">AI, Elixir, MVPs, production mindset and more.</p>
-        <div class="mt-16 space-y-20 lg:mt-20 lg:space-y-20">
+        <div class="mt-16 grid grid-cols-1 gap-x-12 gap-y-16 lg:mt-20 lg:grid-cols-2">
           <%= for post <- @posts do %>
-            <article id="{post.id}" class="relative isolate flex flex-col gap-8 lg:flex-row">
-              <div class="relative aspect-video sm:aspect-[2/1] lg:aspect-square lg:w-64 lg:shrink-0">
+            <article id="{post.id}" class="relative isolate flex flex-col gap-8">
+              <div class="relative aspect-[2/1]">
                 <img
                   src={LinkHelper.blog_post_thumbnail_path(post)}
                   alt={post.title}
@@ -23,14 +23,16 @@
                 <div class="flex items-center gap-x-4 text-xs">
                   <time datetime="2020-03-16" class="text-gray-500">{post.date}</time>
                 </div>
-                <div class="group relative max-w-xl">
+                <div class="group relative">
                   <h3 class="mt-3 text-lg/6 font-semibold text-gray-900 group-hover:text-gray-600">
                     <a href={LinkHelper.blog_post_show(post)}>
                       <span class="absolute inset-0"></span>
                       {post.title}
                     </a>
                   </h3>
-                  <p class="mt-5 text-sm/6 text-gray-600">{raw(post.description)}</p>
+                  <p class="mt-5 text-sm/6 text-gray-600">
+                    {raw(Homepage.StringUtils.truncate(post.description, 100))}
+                  </p>
                 </div>
                 <div class="flex items-center gap-x-4 text-xs py-4">
                   <%= for tag <- Enum.take(post.tags, 5) do %>
