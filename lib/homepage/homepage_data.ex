@@ -356,7 +356,7 @@ defmodule Homepage.HomepageData do
         image: client_image.("signetta.webp"),
         description:
           "Signetta is an eIDAS and GDPR-compliant electronic signing platform tailored for industries with high workforce turnover and seasonality—such as cleaning, hospitality, security, contact centers, catering, landscaping, agriculture, and manufacturing.",
-        website: "www.linkedin.com/company/signetta/",
+        website: "www.signetta.eu",
         country_code: "FR",
         location: "Paris"
       },
