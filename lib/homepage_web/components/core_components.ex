@@ -703,7 +703,6 @@ defmodule HomepageWeb.CoreComponents do
       data-scale="100"
       data-primary-color="#1815e6"
       data-secondary-color="#1815e6"
-      data-reviews="381654,380383,379549"
       data-clutchcompany-id="2243402"
     >
     </div>
