@@ -62,7 +62,7 @@ defmodule Homepage.MixProject do
       # Upcasing strings
       {:recase, "~> 0.8.1"},
       # Tidewave - LLM API MCP
-      {:tidewave, "~> 0.1", runtime: Mix.env() == :dev}
+      {:tidewave, "~> 0.5.6", only: [:dev]}
     ]
   end
 

@@ -22,6 +22,7 @@ defmodule HomepageWeb.HomepagePageData do
     [
       page_data().what_we_do,
       page_data().clients,
+      # page_data().cases,
       page_data().blog
     ]
   end
@@ -33,6 +34,7 @@ defmodule HomepageWeb.HomepagePageData do
       page_data().web_apps,
       page_data().mobile_apps,
       page_data().clients,
+      page_data().cases,
       page_data().blog
     ]
   end
@@ -70,6 +72,46 @@ defmodule HomepageWeb.HomepagePageData do
         title: site_title("Clients"),
         description: "Our clients",
         open_graph: get_page_site_open_graph("Clients")
+      },
+      cases: %{
+        category: :company,
+        name: "Cases",
+        url: ~p"/page/cases",
+        title: site_title("Cases"),
+        description: "Cases",
+        open_graph: get_page_site_open_graph("Cases")
+      },
+      nativedsd: %{
+        category: :company,
+        name: "NativeDSD",
+        url: ~p"/page/nativedsd",
+        title: site_title("NativeDSD"),
+        description: "Nativedsd",
+        open_graph: get_page_site_open_graph("NativeDSD")
+      },
+      signetta: %{
+        category: :company,
+        name: "Signetta",
+        url: ~p"/page/signetta",
+        title: site_title("Signetta"),
+        description: "Signetta",
+        open_graph: get_page_site_open_graph("Signetta")
+      },
+      prisma: %{
+        category: :company,
+        name: "Prisma Net",
+        url: ~p"/page/prisma",
+        title: site_title("Prisma"),
+        description: "Prisma",
+        open_graph: get_page_site_open_graph("Prisma")
+      },
+      burohelp: %{
+        category: :company,
+        name: "Burohelp",
+        url: ~p"/page/burohelp",
+        title: site_title("Burohelp"),
+        description: "Burohelp",
+        open_graph: get_page_site_open_graph("Burohelp")
       },
       what_we_do: %{
         category: :company,

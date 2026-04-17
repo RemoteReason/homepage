@@ -32,7 +32,6 @@ defmodule HomepageWeb.Endpoint do
     plug Tidewave
     plug Phoenix.LiveReloader
     plug Phoenix.CodeReloader
-
   end
 
   plug Phoenix.LiveDashboard.RequestLogger,

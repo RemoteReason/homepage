@@ -371,4 +371,37 @@ defmodule Homepage.HomepageData do
       }
     ]
   end
+
+  def cases_list do
+    case_image = fn image ->
+      "/cases/#{image}"
+    end
+
+    [
+      %{
+        name: "NativeDSD",
+        image: case_image.("nativedsd_case.png"),
+        industry: "Arts, entertainment & music",
+        case_page: "/page/nativedsd"
+      },
+      %{
+        name: "Signetta",
+        image: case_image.("signetta_case.png"),
+        industry: "E-commerce platform",
+        case_page: "/page/signetta"
+      },
+      %{
+        name: "Prisma",
+        image: case_image.("prisma_case.png"),
+        industry: "Health Care",
+        case_page: "/page/prisma"
+      },
+      %{
+        name: "Burohelp",
+        image: case_image.("burohelp_case.png"),
+        industry: "Non-Profit, Public Benefit",
+        case_page: "/page/burohelp"
+      }
+    ]
+  end
 end

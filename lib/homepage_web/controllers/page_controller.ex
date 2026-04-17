@@ -12,6 +12,36 @@ defmodule HomepageWeb.PageController do
     |> render(:clients, page_data: HomepagePageData.page_data().clients)
   end
 
+  def index(conn, %{"page_name" => "cases"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:cases, page_data: HomepagePageData.page_data().cases)
+  end
+
+  def index(conn, %{"page_name" => "nativedsd"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:nativedsd, page_data: HomepagePageData.page_data().nativedsd)
+  end
+
+  def index(conn, %{"page_name" => "signetta"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:signetta, page_data: HomepagePageData.page_data().signetta)
+  end
+
+  def index(conn, %{"page_name" => "prisma"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:prisma, page_data: HomepagePageData.page_data().prisma)
+  end
+
+  def index(conn, %{"page_name" => "burohelp"}) do
+    conn
+    |> put_layout(html: @layout)
+    |> render(:burohelp, page_data: HomepagePageData.page_data().burohelp)
+  end
+
   def index(conn, %{"page_name" => "lets_talk"}) do
     conn
     |> put_layout(html: @layout)

@@ -148,4 +148,224 @@ defmodule HomepageWeb.PageHTML do
     </div>
     """
   end
+
+  attr :alignment, :string, default: "left"
+  slot :inner_block
+
+  def container_box_large_layout(assigns) do
+    ~H"""
+    <%= if @alignment == "left" do %>
+      <div class="flex flex-col px-6 py-6 lg:flex-row-reverse lg:space-x-16 lg:py-10 justify-between">
+        {render_slot(@inner_block)}
+      </div>
+    <% else %>
+      <div class="flex flex-col px-6 py-6 lg:flex-row lg:space-x-16 lg:py-10 justify-between">
+        {render_slot(@inner_block)}
+      </div>
+    <% end %>
+    """
+  end
+
+  attr :alignment, :string, default: "left"
+  attr :title, :string, required: true
+  attr :image, :string, required: true
+  slot :inner_block
+
+  def container_box_large(assigns) do
+    ~H"""
+    <.container_box_large_layout alignment={@alignment}>
+      <div class="flex flex-col pb-6 lg:pl-8 lg:w-1/2 lg:flex-row">
+        <img
+          src={@image}
+          alt="Product screenshot"
+          class="object-contain object-left"
+        />
+      </div>
+      <div class="flex flex-col lg:w-1/2">
+        <div class="flex flex-col space-y-2 pt-6 lg:pt-0 lg:pr-8">
+          <h4 class="max-w-md text-2xl font-semibold">
+            {@title}
+          </h4>
+          <div class="text-lg text-gray-600 lg:text:xl">
+            {render_slot(@inner_block)}
+          </div>
+        </div>
+      </div>
+    </.container_box_large_layout>
+    """
+  end
+
+  attr :title, :string, required: true
+  attr :subtitle, :string, required: true
+
+  def container_box_small(assigns) do
+    ~H"""
+    <div class="flex flex-col w-full text-center pb-6 mx-auto md:w-1/3">
+      <div class="p-2">
+        <h3 class="text-xl font-semibold md:text-4xl">{@title}</h3>
+        <p class="text-sm text-gray-600 font-light">{@subtitle}</p>
+      </div>
+    </div>
+    """
+  end
+
+  attr :title, :string, required: true
+  attr :description, :string, required: true
+
+  def container_page_heading(assigns) do
+    ~H"""
+    <div class="flex flex-col items-center mx-auto p-6 md:flex-row md:space-x-16">
+      <div class="flex flex-col items-left space-y-2 md:w-1/3 text-gray-900 text-left">
+        <h3 class="text-5xl font-bold">{@title}</h3>
+      </div>
+      <!-- Item 2 -->
+      <div class="md:space-x-12 md:w-2/3 font-semibold text-2xl text-gray-800 text-center md:text-right">
+        <p class="text-xl">{@description}</p>
+      </div>
+    </div>
+    """
+  end
+
+  slot :inner_block
+
+  def container_page_box(assigns) do
+    ~H"""
+    <div class="px-6 pt-2 pb-8 md:pb-4">
+      <div class="relative flex flex-col w-full space-y-6 md:flex-row md:space-y-0 md:space-x-12">
+        {render_slot(@inner_block)}
+      </div>
+    </div>
+    """
+  end
+
+  attr :title, :string, required: true
+  slot :inner_block
+
+  def container_page_text(assigns) do
+    ~H"""
+    <div class="container mx-auto px-6 md:pt-2">
+      <h1 class="text-3xl font-semibold leading-normal py-8 text-left md:text-4xl">
+        {@title}
+      </h1>
+      <div class="text-md md:text-lg text-gray-800">
+        {render_slot(@inner_block)}
+      </div>
+    </div>
+    """
+  end
+
+  slot :inner_block
+
+  def container_page_paragraph(assigns) do
+    ~H"""
+    <div class="my-2.5">
+      {render_slot(@inner_block)}
+    </div>
+    """
+  end
+
+  attr :title, :string, required: true
+  slot :inner_block
+
+  def page_box_items(assigns) do
+    ~H"""
+    <div class="flex flex-col p-2 md:p-10 space-y-6  md:w-1/3">
+      <h5 class="text-lg font-semibold">{@title}</h5>
+      {render_slot(@inner_block)}
+    </div>
+    """
+  end
+
+  attr :title, :string, required: false
+  attr :icon, :string, default: "hero-arrow-right"
+  slot :inner_block
+
+  def container_page_paragraph_item(assigns) do
+    ~H"""
+    <li class="group flex items-start gap-2 md:gap-4 my-1.5 text-md/6 text-gray-600">
+      <span class="inline-flex h-8 items-center">
+        <.icon name={@icon} class="h-4 w-4 md:h-5 md-h5" />
+      </span>
+      <div>
+        <p :if={assigns[:title]} class="font-semibold tracking-tight">
+          {@title}
+        </p>
+        {render_slot(@inner_block)}
+      </div>
+    </li>
+    """
+  end
+
+  attr :name, :string, required: true
+  attr :position, :string, required: true
+  attr :image, :string, required: true
+  attr :description, :string, required: true
+  attr :linkedin, :string, required: true
+  attr :clutch, :string, required: true
+
+  def container_page_card(assigns) do
+    ~H"""
+    <div class="container mx-auto p-6 mt-12 mb-20">
+      <div class="relative max-w-4xl mx-auto space-y-6 rounded-lg max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+        <!-- Quote -->
+        <div class="flex flex-col p-6 space-y-6 rounded-lg shadow-lg">
+          <p class="text-lg md:text-2xl text-gray-600 font-light">
+            {@description}
+          </p>
+          <div class="flex space-x-4">
+            <img class="w-12 h-12 rounded-full mt-2" src={@image} alt="{@name}" />
+            <div class="">
+              <h5 class="text-sm font-semibold">{@name}</h5>
+              <p class="text-xs font-extralight">{@position}</p>
+              <div class="flex flex-row space-x-4">
+                <!-- Linkedin -->
+                <a
+                  href={@linkedin}
+                  target="new_page"
+                  class="text-xs font-semibold block"
+                >
+                  <span class="sr-only">LinkedIn</span>
+                  <svg
+                    class="size-6"
+                    fill="#000000"
+                    height="200px"
+                    width="200px"
+                    version="1.1"
+                    id="Shopicons"
+                    xmlns="http://www.w3.org/2000/svg"
+                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                    viewBox="0 0 48 48"
+                    xml:space="preserve"
+                  >
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier">
+                      <style type="text/css">
+                        .st0{fill:none;}
+                      </style>
+                      <g>
+                        <path class="st0" d="M0,0h48v48H0V0z"></path>
+
+                        <path d="M34,4H14C8.5,4,4,8.5,4,14v20c0,5.5,4.5,10,10,10h20c5.5,0,10-4.5,10-10V14C44,8.5,39.5,4,34,4z M17,35h-4V20h4V35z M15,17 c-1.1,0-2-0.9-2-2c0-1.1,0.9-2,2-2s2,0.9,2,2C17,16.1,16.1,17,15,17z M35,35h-4v-7.5c0-2.5-1-3.6-3-3.6L24,24v11h-4V20l8-0.2 c3.4,0,7,2,7,7.6V35z">
+                        </path>
+                      </g>
+                    </g>
+                  </svg>
+                </a>
+                <!-- Clutch -->
+                <a
+                  href={@clutch}
+                  target="new_page"
+                >
+                  <span class="sr-only">Clutch</span>
+                  <img src={HomepageWeb.LinkHelper.image_url("/clutch_logo.jpg")} class="size-6" />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    """
+  end
 end
