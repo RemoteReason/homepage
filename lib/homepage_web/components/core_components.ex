@@ -701,20 +701,57 @@ defmodule HomepageWeb.CoreComponents do
     <script type="text/javascript" src="https://widget.clutch.co/static/js/widget.js">
     </script>
 
-    <div
-      class="clutch-widget"
-      data-url="https://widget.clutch.co"
-      data-widget-type="8"
-      data-height="300"
-      data-nofollow="false"
-      data-expandifr="true"
-      data-scale="100"
-      data-scale="100"
-      data-primary-color="#1815e6"
-      data-secondary-color="#1815e6"
-      data-clutchcompany-id="2243402"
-    >
+    <div class="clutch-responsive-wrapper overflow-hidden w-full">
+      <div
+        class="clutch-widget"
+        data-url="https://widget.clutch.co"
+        data-widget-type="8"
+        data-height="300"
+        data-nofollow="false"
+        data-expandifr="true"
+        data-scale="100"
+        data-primary-color="#1815e6"
+        data-secondary-color="#1815e6"
+        data-clutchcompany-id="2243402"
+      >
+      </div>
     </div>
+
+    <script>
+      (function() {
+        function scaleClutch() {
+          var wrapper = document.querySelector('.clutch-responsive-wrapper');
+          if (!wrapper) return;
+          var iframe = wrapper.querySelector('iframe');
+          if (!iframe) return;
+          var wrapperWidth = wrapper.offsetWidth;
+          var iframeWidth = iframe.offsetWidth;
+          if (iframeWidth > 0 && iframeWidth > wrapperWidth) {
+            var scale = wrapperWidth / iframeWidth;
+            iframe.style.transform = 'scale(' + scale + ')';
+            iframe.style.transformOrigin = 'top left';
+            wrapper.style.height = (iframe.offsetHeight * scale) + 'px';
+          } else {
+            iframe.style.transform = '';
+            iframe.style.transformOrigin = '';
+            wrapper.style.height = '';
+          }
+        }
+
+        function waitForIframe() {
+          var iframe = document.querySelector('.clutch-responsive-wrapper iframe');
+          if (iframe) {
+            scaleClutch();
+            iframe.addEventListener('load', scaleClutch);
+          } else {
+            setTimeout(waitForIframe, 200);
+          }
+        }
+
+        waitForIframe();
+        window.addEventListener('resize', scaleClutch);
+      })();
+    </script>
     """
   end
 
