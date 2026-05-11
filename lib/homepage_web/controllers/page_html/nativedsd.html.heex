@@ -9,39 +9,26 @@
   <!-- About company -->
   <.container_page_text title="The Company">
     <.container_page_paragraph>
-      Nativedsd is a music platform like Spotify but focused on ultra high end audiophiles. The customers of Nativedsd need specialised audio equipment that cost tens of thousands of dollars just be able to listen to their purchased audio files. Customers buy the content digitally via one time purchases, subscriptions or streaming.
+      NativeDSD is a music platform for ultra high-end audiophiles — customers who invest tens of thousands of dollars in specialised equipment to hear the difference. Content is sold via one-time purchases, subscriptions, and streaming.
     </.container_page_paragraph>
     <.container_page_paragraph>
-      To achieve such high quality expectations NativeDsd and it's partner labels provide all audio in studio quality formats that are lossless encoded and have multiple audio channels. A studio quality audio file delivered by NativeDsd is 10-20x larger than a regular audio file delivered via services like Spotify.
-    </.container_page_paragraph>
-    <.container_page_paragraph>
-      NativeDSD stored audio data is 200+ TB and the infrastructure traffic is 50+ TB / month.
-    </.container_page_paragraph>
-    <.container_page_paragraph>
-      Audio data storage and delivery is by far the most important operational cost for the platform. Keeping this cost low enables NativeDSD to stay profitable and grow.
+      Every file is delivered in lossless, multi-channel studio quality — 10–20x larger than a standard Spotify track.
+      The platform stores & delivers hundreds of TB of audio on a monthly basis.
     </.container_page_paragraph>
   </.container_page_text>
   
 <!-- About project -->
-  <.container_page_text title="About the project">
+  <.container_page_text title="The project">
     <.container_page_paragraph>
-      NativeDSD operates since early 2010s and due to it's success it has outgrown their early
-      tech stack & infrastructure.
-    </.container_page_paragraph>
-    <.container_page_paragraph>
-      As the business found it's market fit it still had lots
-      of old features/tech decisions that limited it's ability to move forward faster with lower
-      operational costs.
-    </.container_page_paragraph>
-    <.container_page_paragraph>
-      The project has been focused on:
+      NativeDSD 1.0 launched in the early 2010s and due to it's success it has outgrown their early
+      tech stack & infrastructure. Our work consisted in building NativeDSD 2.0 on a new tech & infra stack.
     </.container_page_paragraph>
   </.container_page_text>
 
   <.container_box_large
     alignment="right"
     image="/images/cases/nativedsd_about.png"
-    title="(1) migrating from an earlier tech stack to a new one => performance, stability, faster development & lower TCO (Total Cost Ownership)"
+    title="Infra & tech stack"
   >
     <div>
       <h3 class="font-semibold">Before</h3>
@@ -87,9 +74,10 @@
   <.container_box_large
     alignment="left"
     image="/images/cases/nativedsd_albums_dashboard.png"
-    title="(2) migrating to a more efficient infrastructure for data storage & delivery => 10x cheaper storage & data delivery"
+    title="5x cheaper data strage & delivery"
   >
     <p>
+      The main operation cost for NativeDSD is data storage & traffic.
       We discovered that NativeDSD had very specific storage and delivery needs and AWS forced us to pay a lot for many features we didn't actually use. A hybrid approach (AWS, Hetzner, Bunny) was the right fit at much lower costs.
     </p>
     <div>
@@ -129,16 +117,16 @@
   <div class="relative flex flex-col justify-between space-y-10 px-10
     md:px-6 md:space-y-0 md:space-x-7 md:flex-row my-10">
     <.container_box_small
-      title="10x"
-      subtitle="cheaper storage & data delivery"
+      title="5x"
+      subtitle="less cost"
     />
     <.container_box_small
-      title="100%+"
-      subtitle="performance, stability, speed"
+      title="2x"
+      subtitle="more albums"
     />
     <.container_box_small
-      title="100%+"
-      subtitle="faster development & lower TCO "
+      title="3x"
+      subtitle="speed increase"
     />
   </div>
   <!--Quote -->
@@ -153,16 +141,18 @@
     clutch="https://clutch.co/go-to-review/21913110-da3a-48cc-9200-43ae5de59e57/380383"
   />
   <!--Showcase -->
-  <div class="container px-6 lg:px-12">
+  <.lets_talk_cta />
+
+  <div class="mt-16 container px-6 lg:px-12">
     <h1 class="text-3xl font-semibold leading-normal text-left md:text-4xl">
-      What we delivered
+      NativeDSD 2.0
     </h1>
   </div>
   <!-- Boxes -->
   <.container_box_large
     alignment="right"
     image="/images/cases/nativedsd_details.png"
-    title="Migration to Shopify shop"
+    title="Shop 2.0 - Shopify"
   >
     <ul>
       <.container_page_paragraph_item>
@@ -171,12 +161,18 @@
       <.container_page_paragraph_item>
         The platform synchronises with Shopify (via webhooks and REST APIs).
       </.container_page_paragraph_item>
+      <.container_page_paragraph_item>
+        Custom Shopify embedded apps (for customers & admins)
+      </.container_page_paragraph_item>
+      <.container_page_paragraph_item>
+        Search Engine Optimisations. Agentic Engine Optimisations.
+      </.container_page_paragraph_item>
     </ul>
   </.container_box_large>
   <.container_box_large
     alignment="left"
     image="/images/cases/nativedsd_about.png"
-    title="New platform"
+    title="Platform 2.0 - Custom"
   >
     <ul>
       <.container_page_paragraph_item>
@@ -193,7 +189,7 @@
   <.container_box_large
     alignment="right"
     image="/images/cases/nativedsd_labels_dashboard.png"
-    title="New backoffice"
+    title="Backoffice 2.0"
   >
     <ul>
       <.container_page_paragraph_item>
@@ -207,27 +203,39 @@
   <.container_box_large
     alignment="left"
     image="/images/cases/nativedsd_search.png"
-    title="New Desktop catalog app"
+    title="Desktop app 2.0"
   >
     <ul>
       <.container_page_paragraph_item>
-        The newly built backoffice is used by the NativeDSD team to automate the importing of data, manage products & publish to Shopify.
+        <b>Cross-Platform</b>
+        Available on macOS, Windows, and Linux. Files are sorted into clean SKU → album → resolution folders, with full catalog search by album, artist, or track.
       </.container_page_paragraph_item>
       <.container_page_paragraph_item>
-        Additionally the web portal has separate modules used by the partner labels (ie. organisations that record and publish albums) to validate, fix and deliver their audio files to resell them via the NativeDSD main shop.
+        <b>
+          Reliable Download Management
+        </b>
+        Downloads queue automatically with pause support. Network interruptions are detected and resumed, with bulk "Resume All" and "Retry All Failed" actions.
+      </.container_page_paragraph_item>
+      <.container_page_paragraph_item>
+        <b>
+          Multi-Format Downloads
+        </b>
+        Download all your purchased DSD, FLAC, and WAV music. Choose quality per album, skip individual tracks, and optionally include artwork and booklets.
       </.container_page_paragraph_item>
     </ul>
   </.container_box_large>
   <!-- Project Highlights  -->
-  <.container_page_text title="Setup" />
+  <.container_page_text title="Highlights" />
   <.container_page_box>
     <.page_box_items title="Project">
       <p class="font-semibold">
         Sector: <span class="font-normal">Arts, entertainment &amp music </span>
       </p>
-      <p class="font-semibold">Size: <span class="font-normal">xxx </span></p>
       <p class="font-semibold">
-        Budget: <span span class="font-normal">$50,000 to $199,999 </span>
+        Work: <span class="font-normal">Backend, Frontend, Devops </span>
+      </p>
+      <p class="font-semibold">
+        Budget: <span span class="font-normal">$200k </span>
       </p>
     </.page_box_items>
     <.page_box_items title="Verticals">
@@ -236,12 +244,9 @@
       <p>- E-commerce</p>
     </.page_box_items>
     <.page_box_items title="Technologies">
-      <p>- PHP/Laravel</p>
-      <p>- Docker</p>
-      <p>- AWS</p>
-      <p>- Hetzner</p>
-      <p>- Shopify</p>
-      <p>- Wordpress</p>
+      <p>- PHP / Laravel / JS</p>
+      <p>- AWS / Hetzner / Docker</p>
+      <p>- Shopify / Wordpress</p>
     </.page_box_items>
   </.container_page_box>
 </.layout_page_centered>
