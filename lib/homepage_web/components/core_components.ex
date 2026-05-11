@@ -610,6 +610,15 @@ defmodule HomepageWeb.CoreComponents do
     """
   end
 
+  attr :name, :string, required: true
+  attr :class, :string, default: "inline-block align-middle mb-0.5"
+
+  def tech_icon(assigns) do
+    ~H"""
+    <img src={"/images/tech/#{@name}.svg"} class={@class} alt="" aria-hidden="true" />
+    """
+  end
+
   ## JS Commands
 
   def show(js \\ %JS{}, selector) do
