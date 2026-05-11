@@ -135,7 +135,7 @@ defmodule HomepageWeb.PageHTML do
   def content_page_header(assigns) do
     ~H"""
     <div class="bg-white">
-      <div class="mx-auto px-6 lg:px-8">
+      <div class="mx-auto">
         <div class="mx-auto max-w-2xl lg:mx-0">
           <h2 class="text-5xl font-semibold tracking-tight text-gray-900 sm:text-7xl">
             {@title}
@@ -145,6 +145,16 @@ defmodule HomepageWeb.PageHTML do
           </p>
         </div>
       </div>
+    </div>
+    """
+  end
+
+  attr :image, :string, required: true
+
+  def container_hero_image(assigns) do
+    ~H"""
+    <div class="static px-0 -mr-10 -ml-10  md:m-0">
+      <img src={@image} alt="Product screenshot" />
     </div>
     """
   end
@@ -183,10 +193,10 @@ defmodule HomepageWeb.PageHTML do
       </div>
       <div class="flex flex-col lg:w-1/2">
         <div class="flex flex-col space-y-2 pt-6 lg:pt-0 lg:pr-8">
-          <h4 class="max-w-md text-2xl font-semibold">
+          <h4 class="max-w-md text-lg md:text-xl font-semibold">
             {@title}
           </h4>
-          <div class="text-lg text-gray-600 lg:text:xl">
+          <div class="text-base/7 text-gray-700">
             {render_slot(@inner_block)}
           </div>
         </div>
@@ -200,10 +210,10 @@ defmodule HomepageWeb.PageHTML do
 
   def container_box_small(assigns) do
     ~H"""
-    <div class="flex flex-col w-full text-center pb-6 mx-auto md:w-1/3">
+    <div class="flex flex-col w-full text-center pb-0 md:pb-6 mx-auto md:w-1/3">
       <div class="p-2">
-        <h3 class="text-xl font-semibold md:text-4xl">{@title}</h3>
-        <p class="text-sm text-gray-600 font-light">{@subtitle}</p>
+        <h3 class="text-2xl font-semibold md:text-4xl">{@title}</h3>
+        <p class="text-sm text-gray-700 font-light">{@subtitle}</p>
       </div>
     </div>
     """
@@ -214,12 +224,12 @@ defmodule HomepageWeb.PageHTML do
 
   def container_page_heading(assigns) do
     ~H"""
-    <div class="flex flex-col items-center mx-auto p-6 md:flex-row md:space-x-16">
-      <div class="flex flex-col items-left space-y-2 md:w-1/3 text-gray-900 text-left">
-        <h3 class="text-5xl font-bold">{@title}</h3>
+    <div class="flex flex-col items-center mx-auto py-6 md:flex-row md:space-x-16">
+      <div class="flex flex-col items-left space-y-2 md:w-1/3 text-left">
+        <h3 class="text-5xl font-semibold text-gray-900">{@title}</h3>
       </div>
       <!-- Item 2 -->
-      <div class="md:space-x-12 md:w-2/3 font-semibold text-2xl text-gray-800 text-center md:text-right">
+      <div class="md:space-x-12 md:w-2/3 font-light text-2xl text-gray-700 text-center md:text-right">
         <p class="text-xl">{@description}</p>
       </div>
     </div>
@@ -231,7 +241,7 @@ defmodule HomepageWeb.PageHTML do
   def container_page_box(assigns) do
     ~H"""
     <div class="px-6 pt-2 pb-8 md:pb-4">
-      <div class="relative flex flex-col w-full space-y-6 md:flex-row md:space-y-0 md:space-x-12">
+      <div class="relative flex flex-col w-full space-y-6 md:flex-row md:space-y-0 md:space-x-12 text-base/7 text-gray-700">
         {render_slot(@inner_block)}
       </div>
     </div>
@@ -244,10 +254,10 @@ defmodule HomepageWeb.PageHTML do
   def container_page_text(assigns) do
     ~H"""
     <div class="container mx-auto px-6 md:pt-2">
-      <h1 class="text-3xl font-semibold leading-normal py-8 text-left md:text-4xl">
+      <h1 class="text-3xl font-semibold leading-normal py-4 text-left md:text-4xl">
         {@title}
       </h1>
-      <div class="text-md md:text-lg text-gray-800">
+      <div class="text-base/7 text-gray-700">
         {render_slot(@inner_block)}
       </div>
     </div>
@@ -258,7 +268,7 @@ defmodule HomepageWeb.PageHTML do
 
   def container_page_paragraph(assigns) do
     ~H"""
-    <div class="my-2.5">
+    <div class="my-2.5 text-base/7 text-gray-700">
       {render_slot(@inner_block)}
     </div>
     """
@@ -269,7 +279,7 @@ defmodule HomepageWeb.PageHTML do
 
   def page_box_items(assigns) do
     ~H"""
-    <div class="flex flex-col p-2 md:p-10 space-y-6  md:w-1/3">
+    <div class="flex flex-col md:p-2 space-y-1 md:w-1/3">
       <h5 class="text-lg font-semibold">{@title}</h5>
       {render_slot(@inner_block)}
     </div>
@@ -282,7 +292,7 @@ defmodule HomepageWeb.PageHTML do
 
   def container_page_paragraph_item(assigns) do
     ~H"""
-    <li class="group flex items-start gap-2 md:gap-4 my-1.5 text-md/6 text-gray-600">
+    <li class="group flex items-start gap-2 md:gap-4 my-1.5 text-base/7 text-gray-700">
       <span class="inline-flex h-8 items-center">
         <.icon name={@icon} class="h-4 w-4 md:h-5 md-h5" />
       </span>
@@ -300,7 +310,7 @@ defmodule HomepageWeb.PageHTML do
   attr :position, :string, required: true
   attr :image, :string, required: true
   attr :description, :string, required: true
-  attr :linkedin, :string, required: true
+  attr :linkedin, :string, required: false
   attr :clutch, :string, required: true
 
   def container_page_card(assigns) do
@@ -318,8 +328,10 @@ defmodule HomepageWeb.PageHTML do
               <h5 class="text-sm font-semibold">{@name}</h5>
               <p class="text-xs font-extralight">{@position}</p>
               <div class="flex flex-row space-x-4">
-                <!-- Linkedin -->
+                
+    <!-- Linkedin -->
                 <a
+                  :if={assigns[:linkedin]}
                   href={@linkedin}
                   target="new_page"
                   class="text-xs font-semibold block"

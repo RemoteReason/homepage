@@ -97,13 +97,13 @@ defmodule HomepageWeb.HomepagePageData do
         description: "Signetta",
         open_graph: get_page_site_open_graph("Signetta")
       },
-      prisma: %{
+      fontdue: %{
         category: :company,
-        name: "Prisma Net",
-        url: ~p"/page/prisma",
-        title: site_title("Prisma"),
-        description: "Prisma",
-        open_graph: get_page_site_open_graph("Prisma")
+        name: "Font Due",
+        url: ~p"/page/fontdue",
+        title: site_title("FontDue"),
+        description: "FontDue",
+        open_graph: get_page_site_open_graph("FontDue")
       },
       burohelp: %{
         category: :company,

@@ -30,10 +30,10 @@ defmodule HomepageWeb.PageController do
     |> render(:signetta, page_data: HomepagePageData.page_data().signetta)
   end
 
-  def index(conn, %{"page_name" => "prisma"}) do
+  def index(conn, %{"page_name" => "fontdue"}) do
     conn
     |> put_layout(html: @layout)
-    |> render(:prisma, page_data: HomepagePageData.page_data().prisma)
+    |> render(:fontdue, page_data: HomepagePageData.page_data().fontdue)
   end
 
   def index(conn, %{"page_name" => "burohelp"}) do

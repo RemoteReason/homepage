@@ -391,10 +391,10 @@ defmodule Homepage.HomepageData do
         case_page: "/page/signetta"
       },
       %{
-        name: "Prisma",
-        image: case_image.("prisma_case.png"),
-        industry: "Health Care",
-        case_page: "/page/prisma"
+        name: "Font Due",
+        image: case_image.("fontdue_about.png"),
+        industry: "E-commerce",
+        case_page: "/page/fontdue"
       },
       %{
         name: "Burohelp",
