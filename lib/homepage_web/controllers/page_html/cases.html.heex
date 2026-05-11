@@ -5,13 +5,14 @@
       sm:text-5xl">
         Cases
     </h1>
+    <p class="mt-4 text-lg text-gray-600">We are proud to deliver value to our clients.</p>
   </div>
   <div class="group-item grid grid-cols-1 md:grid-cols-2 max-w-2xl gap-x-16 gap-y-8 lg:mx-0 lg:max-w-none">
     <!--Feature Container-->
     <%= for case <- Homepage.HomepageData.cases_list() do %>
       <.link href={case.case_page} class="block">
         <div class="relative flex flex-col text-gray-900">
-          <div class="rounded-lg overflow-hidden group item flex flex-col">
+          <div class="rounded-lg overflow-hidden group item flex flex-col ring-1 ring-gray-300 shadow-lg">
             <!--Image-->
             <div class="h-40 overflow-hidden">
               <img
@@ -45,4 +46,6 @@
     <.clutch_testimonials_widget />
   </div>
 </div>
-<.lets_talk_cta />
+<div class="mt-16">
+  <.lets_talk_cta />
+</div>
