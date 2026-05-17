@@ -795,12 +795,17 @@ defmodule HomepageWeb.CoreComponents do
   def lets_talk_cta(assigns) do
     ~H"""
     <div class="bg-white">
-      <div class="mx-auto max-w-7xl px-6 py-2 sm:py-2 lg:flex lg:items-center lg:justify-between lg:px-8">
-        <span class="max-w-2xl text-2xl font-semibold tracking-tight font-mono">
-          Get ready to build your AI native product.<br />Curious about what's possible?<span class="animate-pulse bg-black">_</span>
-        </span>
-        <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
-          <.lets_talk_button />
+      <div class="mx-auto max-w-7xl px-6 py-2 sm:py-2 lg:px-8">
+        <div
+          class="rounded-2xl bg-white p-6 sm:p-8 shadow-lg shadow-zinc-700/10 ring-1 ring-zinc-700/10 lg:flex lg:items-center lg:justify-between"
+          style="background-image: url(&quot;data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%239ca3af' stroke-width='2' stroke-dasharray='2%2c 12' stroke-linecap='round' rx='16' ry='16'/%3e%3c/svg%3e&quot;);"
+        >
+          <span class="max-w-2xl text-2xl font-semibold tracking-tight font-mono">
+            Get ready to build your AI native product.<br />Curious about what's possible?<span class="animate-pulse bg-black">_</span>
+          </span>
+          <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
+            <.lets_talk_button />
+          </div>
         </div>
       </div>
     </div>
