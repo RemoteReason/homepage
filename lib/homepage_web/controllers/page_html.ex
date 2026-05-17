@@ -207,11 +207,15 @@ defmodule HomepageWeb.PageHTML do
 
   attr :title, :string, required: true
   attr :subtitle, :string, required: true
+  attr :border_color, :string, default: nil
 
   def container_box_small(assigns) do
     ~H"""
     <div class="flex flex-col w-full text-center pb-0 md:pb-6 mx-auto md:w-1/3">
-      <div class="p-2">
+      <div class={[
+        "p-6 rounded-2xl bg-white shadow-lg shadow-zinc-700/10 ring-1 ring-zinc-700/10",
+        @border_color && ["border-4 border-dotted", @border_color]
+      ]}>
         <h3 class="text-2xl font-semibold md:text-4xl">{@title}</h3>
         <p class="text-sm text-gray-700 font-light">{@subtitle}</p>
       </div>
