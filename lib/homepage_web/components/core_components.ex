@@ -887,6 +887,18 @@ defmodule HomepageWeb.CoreComponents do
     """
   end
 
+  attr :href, :string, required: true
+  attr :rest, :global
+  slot :inner_block, required: true
+
+  def link_styled(assigns) do
+    ~H"""
+    <.link href={@href} class="text-indigo-600 hover:text-indigo-800" {@rest}>
+      {render_slot(@inner_block)}
+    </.link>
+    """
+  end
+
   def lets_talk_button(assigns) do
     ~H"""
     <a
