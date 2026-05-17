@@ -11,7 +11,9 @@ defmodule HomepageWeb.HomepagePageData do
       page_data().ai_engineering,
       page_data().web_apps,
       page_data().mobile_apps,
+      page_data().about_us,
       page_data().clients,
+      page_data().cases,
       page_data().blog,
       page_data().privacy_policy,
       page_data().cookie_policy
@@ -22,7 +24,7 @@ defmodule HomepageWeb.HomepagePageData do
     [
       page_data().what_we_do,
       page_data().clients,
-      # page_data().cases,
+      page_data().cases,
       page_data().blog
     ]
   end
@@ -57,6 +59,14 @@ defmodule HomepageWeb.HomepagePageData do
         description: "Our blog",
         open_graph: get_page_site_open_graph("Blog")
       },
+      about_us: %{
+        category: :company,
+        name: "About us",
+        url: ~p"/page/lets_talk",
+        title: site_title("About us"),
+        description: "About us",
+        open_graph: get_page_site_open_graph("About us")
+      },
       lets_talk: %{
         category: :company,
         name: "Let's talk",
@@ -75,11 +85,11 @@ defmodule HomepageWeb.HomepagePageData do
       },
       cases: %{
         category: :company,
-        name: "Cases",
+        name: "Case studies",
         url: ~p"/page/cases",
-        title: site_title("Cases"),
-        description: "Cases",
-        open_graph: get_page_site_open_graph("Cases")
+        title: site_title("Case studies"),
+        description: "Case studies",
+        open_graph: get_page_site_open_graph("Case studies")
       },
       nativedsd: %{
         category: :company,

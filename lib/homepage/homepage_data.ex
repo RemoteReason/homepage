@@ -394,7 +394,7 @@ defmodule Homepage.HomepageData do
         name: "Font Due",
         image: case_image.("fontdue_about.png"),
         industry: "E-commerce",
-        case_page: "/page/fontdue"
+        case_page: nil
       },
       %{
         name: "Burohelp",
