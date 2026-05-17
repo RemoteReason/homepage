@@ -211,14 +211,14 @@ defmodule HomepageWeb.PageHTML do
 
   def container_box_small(assigns) do
     ~H"""
-    <div class="flex flex-col w-full text-center pb-0 md:pb-6 mx-auto md:w-1/3">
-      <div class={[
-        "p-6 rounded-2xl bg-white shadow-lg shadow-zinc-700/10 ring-1 ring-zinc-700/10",
-        @border_color && ["border-4 border-dotted", @border_color]
-      ]}>
-        <h3 class="text-2xl font-semibold md:text-4xl">{@title}</h3>
-        <p class="text-sm text-gray-700 font-light">{@subtitle}</p>
-      </div>
+    <div class={[
+      "flex flex-col items-center text-center w-full mx-auto md:w-1/3 p-6 rounded-2xl bg-white",
+      @border_color && ["border-4 border-dotted", @border_color]
+    ]}>
+      <h3 class="text-5xl md:text-7xl font-semibold text-black tracking-tight">{@title}</h3>
+      <span class="mt-3 inline-block text-[10px] uppercase tracking-widest text-gray-700 px-2 py-1">
+        {@subtitle}
+      </span>
     </div>
     """
   end
@@ -320,13 +320,23 @@ defmodule HomepageWeb.PageHTML do
   def container_page_card(assigns) do
     ~H"""
     <div class="container mx-auto p-6 mt-12 mb-20">
-      <div class="relative max-w-4xl mx-auto space-y-6 rounded-lg max-lg:mx-auto max-lg:w-full max-lg:max-w-md">
+      <div class="relative w-full space-y-6 rounded-lg">
         <!-- Quote -->
-        <div class="flex flex-col p-6 space-y-6 rounded-lg shadow-lg">
-          <p class="text-lg md:text-2xl text-gray-600 font-light">
-            {@description}
-          </p>
-          <div class="flex space-x-4">
+        <div
+          class="flex flex-row items-start gap-4 sm:gap-6 p-6 sm:p-8 rounded-2xl bg-white shadow-lg shadow-zinc-700/10 ring-1 ring-zinc-700/10"
+          style="background-image: url(&quot;data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%239ca3af' stroke-width='2' stroke-dasharray='2%2c 12' stroke-linecap='round' rx='16' ry='16'/%3e%3c/svg%3e&quot;);"
+        >
+          <span
+            aria-hidden="true"
+            class="text-7xl sm:text-9xl leading-none font-serif text-gray-300 select-none -mt-2"
+          >
+            &ldquo;
+          </span>
+          <div class="flex-1 flex flex-col space-y-6">
+            <p class="text-lg md:text-2xl text-gray-600 font-light">
+              {@description}
+            </p>
+            <div class="flex space-x-4">
             <img class="w-12 h-12 rounded-full mt-2" src={@image} alt="{@name}" />
             <div class="">
               <h5 class="text-sm font-semibold">{@name}</h5>
@@ -378,6 +388,7 @@ defmodule HomepageWeb.PageHTML do
                 </a>
               </div>
             </div>
+          </div>
           </div>
         </div>
       </div>

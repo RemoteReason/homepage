@@ -801,7 +801,7 @@ defmodule HomepageWeb.CoreComponents do
           style="background-image: url(&quot;data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%239ca3af' stroke-width='2' stroke-dasharray='2%2c 12' stroke-linecap='round' rx='16' ry='16'/%3e%3c/svg%3e&quot;);"
         >
           <span class="max-w-2xl text-2xl font-semibold tracking-tight font-mono">
-            Get ready to build your AI native product.<br />Curious about what's possible?<span class="animate-pulse bg-black">_</span>
+            Build your AI first product.<br />Curious about what's possible?<span class="animate-pulse bg-black">_</span>
           </span>
           <div class="mt-10 flex items-center gap-x-6 lg:mt-0 lg:shrink-0">
             <.lets_talk_button />
