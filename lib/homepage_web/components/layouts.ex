@@ -73,7 +73,7 @@ defmodule HomepageWeb.Layouts do
     <header class="bg-white max-md:sticky max-md:top-0 max-md:z-50">
       <nav class="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8" aria-label="Global">
         <div class="flex flex-1">
-          <div class="hidden lg:flex lg:gap-x-12">
+          <div class="hidden lg:flex lg:gap-x-8">
             <%= for item <- HomepageWeb.HomepagePageData.top_navigation() do %>
               <.link href={item.url} class="text-lg font-semibold text-gray-900 font-mono">
                 {item.name}

@@ -85,7 +85,7 @@ defmodule HomepageWeb.HomepagePageData do
       },
       cases: %{
         category: :company,
-        name: "Case studies",
+        name: "Cases",
         url: ~p"/page/cases",
         title: site_title("Case studies"),
         description: "Case studies",
