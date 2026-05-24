@@ -11,7 +11,7 @@ defmodule HomepageWeb.HomepagePageData do
       page_data().ai_engineering,
       page_data().web_apps,
       page_data().mobile_apps,
-      page_data().about_us,
+      page_data().lets_talk,
       page_data().clients,
       page_data().cases,
       page_data().blog,
@@ -125,12 +125,12 @@ defmodule HomepageWeb.HomepagePageData do
       },
       what_we_do: %{
         category: :company,
-        name: "What we do",
+        name: "About",
         url: ~p"/page/what_we_do",
-        title: site_title("What we do"),
+        title: site_title("About"),
         description:
           "We are a software development company that builds custom software solutions for businesses.",
-        open_graph: get_page_site_open_graph("What we do")
+        open_graph: get_page_site_open_graph("About")
       },
       ai_product_strategy: %{
         category: :services,
